@@ -11,12 +11,12 @@ export default function ({ mode }) {
     // https://vitejs.dev/config/
     const isDev = process.env.NODE_ENV !== "production";
     return defineConfig({
-        base: "/nsp-template/",
+        base: "/",
         envPrefix: ["NSP_"],
         plugins: [
             react(),
             tsconfigPaths(),
-            // @ts-ignore
+            // @ts-expect-error unknown error
             visualizer({
                 filename: "dist/visualizer.html",
                 open: false,
@@ -53,7 +53,7 @@ export default function ({ mode }) {
             _APP_SWITCH_URL: JSON.stringify(""),
         },
         server: {
-            port: 15000,
+            port: 14001,
             host: true,
         },
         build: {
