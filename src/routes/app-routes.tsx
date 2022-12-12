@@ -17,9 +17,9 @@ import {
     DashboardRouter,
     HomeRouter,
 } from "@project-self/routes/common-services/dashboard/router";
-import { SafetyServiceRoutes } from "@project-self/routes/safety-services/routes";
 import { getLoginStatus } from "@project-self/utils/env-detect";
 import LayoutConfig from "@project-self/layout/layout-config";
+import { ToolsServices } from "./tools-services/routes";
 
 export type AppRouteObject = RouteObject & {
     permission: number[];
@@ -36,7 +36,7 @@ export type AppRouteObject = RouteObject & {
  *
  */
 const withPermissionPageRoutes: AppRouteObject[] = [
-    ...SafetyServiceRoutes,
+    ...ToolsServices,
     // MasterRoutes,
     // MasterDetailRoutes,
 ];

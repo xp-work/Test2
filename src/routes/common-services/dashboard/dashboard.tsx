@@ -60,7 +60,6 @@ const Dashboard = () => {
                     </NavLink>
                 </Col>
             </Row>
-            <Button type="primary">test</Button>
         </div>
     );
 };
