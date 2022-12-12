@@ -100,7 +100,7 @@ const LayoutIndex = () => {
                             <BreadcrumbSub />
                         </div>
                         <Content
-                            className="flex-1 overflow-auto scrollBar m-0 p-4"
+                            className={"flex-auto m-0 p-4"}
                             style={{ backgroundColor: token.colorBgLayout }}
                         >
                             {isFirstRender ? (

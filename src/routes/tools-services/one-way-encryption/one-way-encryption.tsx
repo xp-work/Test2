@@ -92,8 +92,9 @@ const OneWayEncryption = () => {
     };
 
     return (
-        <section>
+        <section className={"h-full"}>
             <Tabs
+                className={"h-full overflow-auto"}
                 defaultActiveKey={tabKey}
                 onChange={handleTabSwitch}
                 items={[

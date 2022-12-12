@@ -13,7 +13,7 @@ const Hmac = () => {
     };
 
     return (
-        <section className={"h-full"}>
+        <section className={"h-full flex flex-col"}>
             <Typography.Paragraph>
                 密钥散列消息认证码（英语：Keyed-hash message authentication
                 code），又称散列消息认证码（Hash-based message authentication
@@ -31,6 +31,7 @@ const Hmac = () => {
             </Typography.Paragraph>
             <Divider />
             <Tabs
+                className={"flex-auto h-full overflow-auto"}
                 defaultActiveKey={tabKey}
                 onChange={handleTabSwitch}
                 items={[
