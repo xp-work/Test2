@@ -45,9 +45,9 @@ export const menuList: MenuItem[] = [
             },
             {
                 id: 200020020,
-                url: "/generate/uuid",
+                url: "/generate/guid",
                 icon: null,
-                name: "UUID",
+                name: "Guid",
                 subMenus: null,
             },
         ],
