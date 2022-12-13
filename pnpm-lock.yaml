@@ -23,6 +23,7 @@ specifiers:
   antd: ^5.0.4
   autoprefixer: ^10.4.13
   axios: ^1.2.0
+  buffer: ^6.0.3
   classnames: ^2.3.2
   crypto-js: ^4.1.1
   dayjs: ^1.11.6
@@ -61,6 +62,7 @@ dependencies:
   ahooks: 3.7.2_react@18.2.0
   antd: 5.0.4_biqbaboplfbrettd7655fr4n2y
   axios: 1.2.0
+  buffer: 6.0.3
   classnames: 2.3.2
   crypto-js: 4.1.1
   dayjs: 1.11.6
@@ -1359,6 +1361,13 @@ packages:
       update-browserslist-db: 1.0.10_browserslist@4.21.4
     dev: true
 
+  /buffer/6.0.3:
+    resolution: {integrity: sha512-FTiCpNxtwiZZHEZbcbTIcZjERVICn9yq/pDFkTl95/AxzD1naBctN7YO68riM/gLSDY7sdrMby8hofADYuuqOA==}
+    dependencies:
+      base64-js: 1.5.1
+      ieee754: 1.2.1
+    dev: false
+
   /call-bind/1.0.2:
     resolution: {integrity: sha512-7O+FbCihrB5WGbFYesctwmTKae6rOiIzmz1icreWJ+0aA7LJfuqhEso2T9ncpcFtzMQtzXf2QGGueWJGTYsqrA==}
     dependencies:
@@ -2321,6 +2330,10 @@ packages:
     dependencies:
       safer-buffer: 2.1.2
     optional: true
+
+  /ieee754/1.2.1:
+    resolution: {integrity: sha512-dcyqhDvX1C46lXZcVqCpK+FtMRQVdIMN6/Df5js2zouUsqG7I6sFxitIC+7KYK29KdXOLHdu9zL4sFnoVQnqaA==}
+    dev: false
 
   /ignore/5.2.1:
     resolution: {integrity: sha512-d2qQLzTJ9WxQftPAuEQpSPmKqzxePjzVbpAVv62AQ64NTL+wR4JkrVqR/LqFsFEUsHDAiId52mJteHDFuDkElA==}
