@@ -52,6 +52,24 @@ const RightHeader = () => {
                 break;
         }
     };
+
+    const getSettingMenus = () => {
+        const items: MenuProps["items"] = [
+            {
+                key: RightSettingType.SystemInfo,
+                icon: <InfoCircleOutlined />,
+                label: "版本信息",
+            },
+        ];
+        if (_LOGIN_STATUS_) {
+            items.push({
+                key: RightSettingType.LogoOut,
+                icon: <LogoutOutlined />,
+                label: "退出登录",
+            });
+        }
+        return items;
+    };
     return (
         <div className={"ml-4 flex items-center gap-3"}>
             <Button
@@ -66,23 +84,10 @@ const RightHeader = () => {
                 </Typography.Text>
             )}
             <Dropdown
-                overlay={
-                    <Menu
-                        onClick={handlerMenuClick}
-                        items={[
-                            {
-                                key: RightSettingType.SystemInfo,
-                                icon: <InfoCircleOutlined />,
-                                label: "版本信息",
-                            },
-                            {
-                                key: RightSettingType.LogoOut,
-                                icon: <LogoutOutlined />,
-                                label: "退出登录",
-                            },
-                        ]}
-                    />
-                }
+                menu={{
+                    items: getSettingMenus(),
+                    onClick: handlerMenuClick,
+                }}
                 placement="bottomLeft"
                 arrow={{ pointAtCenter: true }}
             >
