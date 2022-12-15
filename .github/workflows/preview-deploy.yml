@@ -10,8 +10,10 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
       - uses: actions/checkout@v3
+
       - name: Use nodejs build dist
         uses: actions/setup-node@v3
         with:
@@ -20,14 +22,13 @@ jobs:
           CI: true
           NETLIFY_AUTH_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PREVIEW_ID }}
-      - run: echo ${{github.ref}}
-      - run: npm install -g pnpm
-      - run: npm install -g netlify-cli
-      - run: pnpm config set store-dir ~/.pnpm-store
-      - run: pnpm install --strict-peer-dependencies=false
-      - run: pnpm run lint:error
-      - run: pnpm run build
-      - run: netlify deploy --site "$NSP_NETLIFY_PREVIEW_ID" --dir dist --auth "$NSP_NETLIFY_ACCESS_TOKEN"
+        run: |
+          echo ${{github.ref}}
+          npm install -g pnpm
+          pnpm config set store-dir ~/.pnpm-store
+          pnpm install --strict-peer-dependencies=false
+          pnpm run lint:error
+          pnpm run build
 
       - name: Deploy to Netlify
         use: nwtgck/actions-netlify@v1.2
