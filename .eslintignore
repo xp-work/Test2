@@ -1,7 +1,11 @@
 **/node_modules/**
+
 src/**/*.md
 src/**/*.scss
 src/**/*.svg
 src/**/*.png
 src/**/*.jpg
+
 package.json
+dist
+public
