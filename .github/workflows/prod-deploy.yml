@@ -3,11 +3,6 @@ name: Deploy prod
 on:
   push:
     branches: [ "master" ]
-  workflow_run:
-    workflows: [ Node pnpm CI ]
-    branches: [ "master" ]
-    types:
-      - completed
 
 permissions:
   contents: read
@@ -35,6 +30,7 @@ jobs:
       - run: pnpm config set store-dir ~/.pnpm-store
       - run: pnpm install --strict-peer-dependencies=false
       - run: pnpm add -g netlify-cli
+      - run: pnpm run lint:error
       - run: pnpm run build
       - run: netlify deploy --site $NETLIFY_PROD_ID --dir dist --auth $NETLIFY_ACCESS_TOKEN --prod
 
