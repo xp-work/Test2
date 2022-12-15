@@ -10,25 +10,31 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js ${{ matrix.node_version }}
+      - name: Checkout
+        uses: actions/checkout@v3
+
+      - name: Use nodejs build dist
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
+
+      - name: build
+        run: |
+          echo ${{github.ref}}
+          npm install -g pnpm
+          pnpm config set store-dir ~/.pnpm-store
+          pnpm install --strict-peer-dependencies=false
+          pnpm run lint:error
+          pnpm run build
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
+        with:
+          publish-dir: 'dist'
+          production-deploy: true
         env:
-          CI: true
-          PROGRESS: none
-          NODE_ENV: test
-          NODE_OPTIONS: --max_old_space_size=4096
-          NSP_NETLIFY_ACCESS_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
-          NSP_NETLIFY_PREVIEW_ID: ${{ secrets.NSP_NETLIFY_PREVIEW_ID }}
-          NSP_NETLIFY_PROD_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
-      - run: echo ${{github.ref}}
-      - run: npm install -g pnpm
-      - run: npm install -g netlify-cli
-      - run: pnpm config set store-dir ~/.pnpm-store
-      - run: pnpm install --strict-peer-dependencies=false
-      - run: pnpm run lint:error
-      - run: pnpm run build
-      - run: netlify deploy --site $NSP_NETLIFY_PROD_ID --dir dist --auth $NSP_NETLIFY_ACCESS_TOKEN --prod
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
+        timeout-minutes: 1
