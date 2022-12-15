@@ -31,4 +31,4 @@ jobs:
       - run: pnpm install --strict-peer-dependencies=false
       - run: pnpm run lint:error
       - run: pnpm run build
-      - run: netlify deploy --site $NSP_NETLIFY_PREVIEW_ID --dir dist --auth $NSP_NETLIFY_ACCESS_TOKEN
+      - run: netlify deploy --site "$NSP_NETLIFY_PREVIEW_ID" --dir dist --auth "$NSP_NETLIFY_ACCESS_TOKEN"
