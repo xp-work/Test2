@@ -1,4 +1,4 @@
-name: Node pnpm CI
+name: Deploy prod
 
 on:
   push:
