@@ -1,0 +1,45 @@
+name: Node pnpm CI
+
+on:
+  push:
+    branches: [ "master" ]
+  workflow_run:
+    workflows: [ Node pnpm CI ]
+    branches: [ "master" ]
+    types:
+      - completed
+
+permissions:
+  contents: read
+
+jobs:
+  on-success:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'success' }}
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js ${{ matrix.node_version }}
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+        env:
+          CI: true
+          PROGRESS: none
+          NODE_ENV: test
+          NODE_OPTIONS: --max_old_space_size=4096
+          NETLIFY_ACCESS_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
+          NETLIFY_PREVIEW_ID: ${{ secrets.PREVIEW_ID }}
+          NETLIFY_PROD_ID: ${{ secrets.PROD_ID }}
+      - run: echo ${{github.ref}}
+      - run: npm install -g pnpm
+      - run: pnpm config set store-dir ~/.pnpm-store
+      - run: pnpm install --strict-peer-dependencies=false
+      - run: pnpm add -g netlify-cli
+      - run: pnpm run build
+      - run: netlify deploy --site $NETLIFY_PROD_ID --dir dist --auth $NETLIFY_ACCESS_TOKEN --prod
+
+  on-failure:
+    runs-on: ubuntu-latest
+    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
+    steps:
+      - run: echo 'The node pnpm CI workflow failed'
