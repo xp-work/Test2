@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  on-success:
+  build:
     runs-on: ubuntu-latest
     if: ${{ github.event.workflow_run.conclusion == 'success' }}
     steps:
@@ -33,9 +33,3 @@ jobs:
       - run: pnpm run lint:error
       - run: pnpm run build
       - run: netlify deploy --site $NETLIFY_PROD_ID --dir dist --auth $NETLIFY_ACCESS_TOKEN --prod
-
-  on-failure:
-    runs-on: ubuntu-latest
-    if: ${{ github.event.workflow_run.conclusion == 'failure' }}
-    steps:
-      - run: echo 'The node pnpm CI workflow failed'
