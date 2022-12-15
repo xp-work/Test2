@@ -21,9 +21,9 @@ jobs:
           PROGRESS: none
           NODE_ENV: test
           NODE_OPTIONS: --max_old_space_size=4096
-          NETLIFY_ACCESS_TOKEN: ${{ secrets.NETLIFY_ACCESS_TOKEN }}
-          NETLIFY_PREVIEW_ID: ${{ secrets.PREVIEW_ID }}
-          NETLIFY_PROD_ID: ${{ secrets.PROD_ID }}
+          NSP_NETLIFY_ACCESS_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
+          NSP_NETLIFY_PREVIEW_ID: ${{ secrets.NSP_NETLIFY_PREVIEW_ID }}
+          NSP_NETLIFY_PROD_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
       - run: echo ${{github.ref}}
       - run: npm install -g pnpm
       - run: npm install -g netlify-cli
@@ -31,4 +31,4 @@ jobs:
       - run: pnpm install --strict-peer-dependencies=false
       - run: pnpm run lint:error
       - run: pnpm run build
-      - run: netlify deploy --site $NETLIFY_PREVIEW_ID --dir dist --auth $NETLIFY_ACCESS_TOKEN
+      - run: netlify deploy --site $NSP_NETLIFY_PREVIEW_ID --dir dist --auth $NSP_NETLIFY_ACCESS_TOKEN
