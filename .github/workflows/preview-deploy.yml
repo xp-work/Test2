@@ -26,9 +26,9 @@ jobs:
           NETLIFY_PROD_ID: ${{ secrets.PROD_ID }}
       - run: echo ${{github.ref}}
       - run: npm install -g pnpm
+      - run: npm install -g netlify-cli
       - run: pnpm config set store-dir ~/.pnpm-store
       - run: pnpm install --strict-peer-dependencies=false
-      - run: pnpm add -g netlify-cli
       - run: pnpm run lint:error
       - run: pnpm run build
       - run: netlify deploy --site $NETLIFY_PREVIEW_ID --dir dist --auth $NETLIFY_ACCESS_TOKEN
