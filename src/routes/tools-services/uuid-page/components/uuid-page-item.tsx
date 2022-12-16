@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import { Button, InputNumber, List, Space, Typography } from "antd";
 import { isNumber } from "lodash";
-import {GuidGenerator, GuidType} from "@project-self/routes/tools-services/guid-page/utils";
+import {UuidGenerator, GuidType} from "@project-self/routes/tools-services/uuid-page/utils";
 
 type GuidPageItemProps = {
     description:string,
@@ -10,13 +10,13 @@ type GuidPageItemProps = {
     count: number,
 }
 
-const GuidPageItem = (props:GuidPageItemProps) => {
+const UuidPageItem = (props:GuidPageItemProps) => {
     const [count, setCount] = useState(props.count);
     const [strList, setStrList] = useState<string[]>([]);
     const handleGenerate = () => {
         const arr: string[] = [];
         for (let i = 0; i < count; i++) {
-            arr.push(GuidGenerator(props.type,props.format));
+            arr.push(UuidGenerator(props.type,props.format));
         }
         setStrList(arr);
     };
@@ -50,4 +50,4 @@ const GuidPageItem = (props:GuidPageItemProps) => {
         </Space>
     );
 };
-export default GuidPageItem;
+export default UuidPageItem;

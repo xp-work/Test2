@@ -1,45 +1,26 @@
 import React, { useCallback, useState } from "react";
 import { Checkbox, Space, Tabs } from "antd";
-import useCommonSearchParams from "@project-self/hooks/useCommonSearchParams";
 import {
-    GuidGeneratorFormat,
+    UuidGeneratorFormat,
     GuidType,
-} from "@project-self/routes/tools-services/guid-page/utils";
-import GuidPageItem from "@project-self/routes/tools-services/guid-page/components/guid-page-item";
+} from "@project-self/routes/tools-services/uuid-page/utils";
+import UuidPageItem from "@project-self/routes/tools-services/uuid-page/components/uuid-page-item";
+import useTabKey from "@project-self/hooks/useTabKey";
 
-type paramsType = {
-    tab: string;
-    format: number;
-};
-
-const GuidPage = () => {
-    const [params, setParams] = useCommonSearchParams<paramsType>({
-        tab: GuidType.v1,
-        format: 0,
-    });
-    const [format, setFormat] = useState(params.format);
+const UuidPage = () => {
+    const [tabKey, setTabKey] = useTabKey(GuidType.v1);
+    const [format, setFormat] = useState(0);
 
     const handleTabSwitch = (key: string) => {
-        setParams({
-            tab: key,
-            format: format,
-        });
+        setTabKey(key);
     };
 
     const handleFormatChange = useCallback(
-        (type: GuidGeneratorFormat) => {
+        (type: UuidGeneratorFormat) => {
             if ((format & type) == type) {
                 setFormat(format - type);
-                setParams({
-                    tab: params.tab,
-                    format: format - type,
-                });
             } else {
                 setFormat(format | type);
-                setParams({
-                    tab: params.tab,
-                    format: format | type,
-                });
             }
         },
         [format]
@@ -49,33 +30,33 @@ const GuidPage = () => {
             <Space>
                 <Checkbox
                     checked={
-                        (format & GuidGeneratorFormat.Uppercase) ==
-                        GuidGeneratorFormat.Uppercase
+                        (format & UuidGeneratorFormat.Uppercase) ==
+                        UuidGeneratorFormat.Uppercase
                     }
                     onChange={() =>
-                        handleFormatChange(GuidGeneratorFormat.Uppercase)
+                        handleFormatChange(UuidGeneratorFormat.Uppercase)
                     }
                 >
                     大写
                 </Checkbox>
                 <Checkbox
                     checked={
-                        (format & GuidGeneratorFormat.Braces) ==
-                        GuidGeneratorFormat.Braces
+                        (format & UuidGeneratorFormat.Braces) ==
+                        UuidGeneratorFormat.Braces
                     }
                     onChange={() =>
-                        handleFormatChange(GuidGeneratorFormat.Braces)
+                        handleFormatChange(UuidGeneratorFormat.Braces)
                     }
                 >
                     有大括号
                 </Checkbox>
                 <Checkbox
                     checked={
-                        (format & GuidGeneratorFormat.Hyphens) ==
-                        GuidGeneratorFormat.Hyphens
+                        (format & UuidGeneratorFormat.Hyphens) ==
+                        UuidGeneratorFormat.Hyphens
                     }
                     onChange={() =>
-                        handleFormatChange(GuidGeneratorFormat.Hyphens)
+                        handleFormatChange(UuidGeneratorFormat.Hyphens)
                     }
                 >
                     无连字符
@@ -83,16 +64,16 @@ const GuidPage = () => {
             </Space>
             <Tabs
                 className={"h-full overflow-auto"}
-                defaultActiveKey={params.tab}
+                defaultActiveKey={tabKey}
                 onChange={handleTabSwitch}
                 items={[
                     {
                         label: GuidType.v1,
                         key: GuidType.v1,
                         children: (
-                            <GuidPageItem
+                            <UuidPageItem
                                 description={"创建 版本 1 (时间戳) UUID"}
-                                format={params.format}
+                                format={format}
                                 type={GuidType.v1}
                                 count={1}
                             />
@@ -102,9 +83,9 @@ const GuidPage = () => {
                         label: GuidType.v4,
                         key: GuidType.v4,
                         children: (
-                            <GuidPageItem
+                            <UuidPageItem
                                 description={"创建 版本 4 (随机) UUID"}
-                                format={params.format}
+                                format={format}
                                 type={GuidType.v4}
                                 count={10}
                             />
@@ -116,4 +97,4 @@ const GuidPage = () => {
     );
 };
 
-export default GuidPage;
+export default UuidPage;

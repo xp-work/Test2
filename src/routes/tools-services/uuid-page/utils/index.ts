@@ -6,7 +6,7 @@ export enum GuidType {
     v4 = "Guid V4",
 }
 
-export enum GuidGeneratorFormat {
+export enum UuidGeneratorFormat {
     /* 大写 */
     Uppercase = 1 << 0,
     /* 有大括号 */
@@ -15,30 +15,30 @@ export enum GuidGeneratorFormat {
     Hyphens = 1 << 2,
 }
 
-export const GuidFormatExecute = (val: string, format: number): string => {
+export const UuidFormatExecute = (val: string, format: number): string => {
     if (
-        (format & GuidGeneratorFormat.Uppercase) ==
-        GuidGeneratorFormat.Uppercase
+        (format & UuidGeneratorFormat.Uppercase) ==
+        UuidGeneratorFormat.Uppercase
     ) {
         val = toUpper(val);
     }
-    if ((format & GuidGeneratorFormat.Braces) == GuidGeneratorFormat.Braces) {
+    if ((format & UuidGeneratorFormat.Braces) == UuidGeneratorFormat.Braces) {
         val = "{" + val + "}";
     }
-    if ((format & GuidGeneratorFormat.Hyphens) == GuidGeneratorFormat.Hyphens) {
+    if ((format & UuidGeneratorFormat.Hyphens) == UuidGeneratorFormat.Hyphens) {
         val = val.replaceAll("-", "");
     }
     return val;
 };
 
-export const GuidGenerator = (type: GuidType, format: number): string => {
+export const UuidGenerator = (type: GuidType, format: number): string => {
     switch (type) {
         case GuidType.v1:
-            return GuidFormatExecute(uuid.v1(), format);
+            return UuidFormatExecute(uuid.v1(), format);
         case GuidType.v4:
-            return GuidFormatExecute(uuid.v4(), format);
+            return UuidFormatExecute(uuid.v4(), format);
         default:
-            return GuidFormatExecute(
+            return UuidFormatExecute(
                 "00000000-0000-0000-0000-000000000000",
                 format
             );

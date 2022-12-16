@@ -46,9 +46,9 @@ const Dashboard = () => {
                     </NavLink>
                 </Col>
                 <Col span={6} className={"px-3"}>
-                    <NavLink to={"/generate/guid"}>
+                    <NavLink to={"/generate/uuid"}>
                         <Card
-                            title={"Guid"}
+                            title={"Uuid"}
                             hoverable={true}
                             className={"w-full h-full"}
                         >
