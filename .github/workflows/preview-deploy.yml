@@ -8,7 +8,7 @@ permissions:
   contents: read
 
 jobs:
-  build:
+  preview-deploy:
     runs-on: ubuntu-latest
 
     steps:
@@ -20,7 +20,7 @@ jobs:
         with:
           node-version: 16.x
 
-      - name: build
+      - name: Lint and build
         run: |
           echo ${{github.ref}}
           npm install -g pnpm
