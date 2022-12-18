@@ -15,14 +15,14 @@ const LayoutConfig = () => {
         // https://ant-design.github.io/antd-token-previewer/~demos/docs-theme-editor-simple 主题调试
         <ConfigProvider
             locale={zhCN}
-            theme={{
-                token: {
-                    colorPrimary: themeColor.colorPrimary,
-                    colorSuccess: themeColor.colorSuccess,
-                    colorWarning: themeColor.colorWarning,
-                    colorError: themeColor.colorError,
-                },
-            }}
+            // theme={{
+            //     token: {
+            //         colorPrimary: themeColor.colorPrimary,
+            //         colorSuccess: themeColor.colorSuccess,
+            //         colorWarning: themeColor.colorWarning,
+            //         colorError: themeColor.colorError,
+            //     },
+            // }}
         >
             <LayoutIndex />
         </ConfigProvider>
