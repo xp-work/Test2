@@ -1,10 +1,10 @@
 import { createSlice, PayloadAction } from "@reduxjs/toolkit";
 
 export type ThemeColor = {
-    colorPrimary: string;
-    colorSuccess: string;
-    colorWarning: string;
-    colorError: string;
+    colorPrimary?: string;
+    colorSuccess?: string;
+    colorWarning?: string;
+    colorError?: string;
 };
 /**
  * getMenus
@@ -18,16 +18,14 @@ export type GlobalState = {
     firstRenderNum: number;
     isFinishFirstRender: boolean;
 };
-const message = "正在编辑中，是否退出？";
-
 const initialState: GlobalState = {
     breadcrumbLastTitle: null,
     loading: false,
     themeColor: {
-        colorPrimary: "#13c2c2",
-        colorSuccess: "#00d602",
-        colorWarning: "#ffc700",
-        colorError: "#f5222d",
+        colorPrimary: undefined, //"#13c2c2",
+        colorSuccess: undefined, //"#00d602",
+        colorWarning: undefined, //"#ffc700",
+        colorError: undefined, //"#f5222d",
     },
     firstRenderNum: 0,
     isFinishFirstRender: false,
