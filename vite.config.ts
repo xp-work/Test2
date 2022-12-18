@@ -28,7 +28,7 @@ export default function ({ mode }) {
         css: {
             preprocessorOptions: {
                 less: {
-                    javascriptEnabled: true,
+                    javascriptEnabled: false,
                 },
             },
         },

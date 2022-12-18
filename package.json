@@ -22,6 +22,7 @@
         "ahooks": "^3.7.2",
         "antd": "^5.0.4",
         "axios": "^1.2.0",
+        "buffer": "^6.0.3",
         "classnames": "^2.3.2",
         "crypto-js": "^4.1.1",
         "dayjs": "^1.11.6",
@@ -35,7 +36,8 @@
         "react-router-dom": "^6.4.3",
         "redux": "^4.2.0",
         "redux-oidc": "4.0.0-beta1",
-        "store2": "^2.14.2"
+        "store2": "^2.14.2",
+        "uuid": "^9.0.0"
     },
     "devDependencies": {
         "@types/classnames": "^2.3.1",
@@ -47,6 +49,7 @@
         "@types/react-redux": "^7.1.24",
         "@types/redux-logger": "^3.0.9",
         "@types/rollup-plugin-visualizer": "^4.2.1",
+        "@types/uuid": "^9.0.0",
         "@typescript-eslint/eslint-plugin": "^5.46.0",
         "@typescript-eslint/parser": "^5.46.0",
         "@vitejs/plugin-react": "^2.2.0",

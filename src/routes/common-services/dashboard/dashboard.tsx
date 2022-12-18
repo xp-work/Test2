@@ -1,5 +1,5 @@
 import React from "react";
-import { Button, Card, Col, Row } from "antd";
+import { Card, Col, Row } from "antd";
 import { NavLink } from "react-router-dom";
 
 const Dashboard = () => {
@@ -48,7 +48,7 @@ const Dashboard = () => {
                 <Col span={6} className={"px-3"}>
                     <NavLink to={"/generate/uuid"}>
                         <Card
-                            title={"UUID"}
+                            title={"Uuid"}
                             hoverable={true}
                             className={"w-full h-full"}
                         >
