@@ -4,6 +4,8 @@ interface Window {
     _AUTHORITY_ENDPOINT: string;
     _API_END_POINT: string;
     _ICON_FONT_URL: string;
+    // google tags
+    gtag: any;
 }
 
 type Styling<T> = {
