@@ -106,11 +106,7 @@ const RsaGenerate = () => {
                         onChange={bitChangeDebounce.run}
                         onStep={bitChangeFun}
                     />
-                    <Button
-                        type={"primary"}
-                        onClick={() => generateKey()}
-                        loading={loading}
-                    >
+                    <Button type={"primary"} onClick={() => generateKey()}>
                         生成公私钥
                     </Button>
                 </Space>
