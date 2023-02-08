@@ -22,3 +22,8 @@ export const DefaultRouteBreadcrumb: Record<string, string> = {
 };
 
 export const ApiToken = "PRh7eQ7K7OUJVZPDnR9ihcMe2VMS93OL";
+
+export const PageLocalStorage = {
+    RsaGeneratePublicKey: "rsa-generate-public-key",
+    RsaGeneratePrivateKey: "rsa-generate-private-key",
+};

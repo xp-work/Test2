@@ -50,6 +50,13 @@ export const menuList: MenuItem[] = [
                 name: "Guid",
                 subMenus: null,
             },
+            {
+                id: 200020030,
+                url: "/generate/rsa",
+                icon: null,
+                name: "RSA",
+                subMenus: null,
+            },
         ],
     },
 ];
