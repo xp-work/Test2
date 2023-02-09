@@ -110,7 +110,7 @@ const RsaGenerate = () => {
             <Spin tip={"生成中..."} spinning={loading}>
                 <Typography.Paragraph>
                     此处只用来生成RSA非对称加密密钥，具体的加密和解密请前往
-                    <Link to={"/safety/rsa"}>此处</Link>
+                    <Link to={"/safety/rsa-use"}>此处</Link>
                 </Typography.Paragraph>
                 <Space align={"center"}>
                     <Typography.Text>请滑动选择位数：</Typography.Text>

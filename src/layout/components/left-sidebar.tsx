@@ -70,8 +70,8 @@ const LeftSider = () => {
 
     useEffect(() => {
         setSelectMenuKeys(FindSelectIdsByUrls(menus, urls));
-        const [_t, openKeys] = FindOpenIdsByUrls(menus, urls);
-        if (openKeys.length > 0) {
+        const [_, openKeys] = FindOpenIdsByUrls(menus, urls);
+        if (openKeys.length > 0 && !menuStatus) {
             setOpenMenuKeys(union(openKeys, openMenuKeys));
         }
 
