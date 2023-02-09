@@ -4,7 +4,7 @@ import { NavLink } from "react-router-dom";
 
 const Dashboard = () => {
     return (
-        <div style={{ padding: "20px" }}>
+        <section className={"h-full overflow-auto p-4"}>
             <Space direction={"vertical"}>
                 <Typography.Title level={3}>安全工具</Typography.Title>
                 <Row gutter={[6, 6]}>
@@ -91,7 +91,7 @@ const Dashboard = () => {
                     </Col>
                 </Row>
             </Space>
-        </div>
+        </section>
     );
 };
 
