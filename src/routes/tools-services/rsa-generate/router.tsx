@@ -7,7 +7,7 @@ const RsaGenerateLazy = React.lazy(
 );
 
 const RsaGenerateRouter: AppRouteObject = {
-    path: "/generate/rsa",
+    path: "/generate/rsa-generate",
     element: <LazyImportComponent lazyChildren={RsaGenerateLazy} />,
     permission: [],
 };

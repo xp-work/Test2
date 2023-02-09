@@ -28,6 +28,13 @@ export const menuList: MenuItem[] = [
                 name: "HMAC",
                 subMenus: null,
             },
+            {
+                id: 200010030,
+                url: "/safety/rsa-use",
+                icon: null,
+                name: "RSA 加解密",
+                subMenus: null,
+            },
         ],
     },
     {
@@ -52,9 +59,9 @@ export const menuList: MenuItem[] = [
             },
             {
                 id: 200020030,
-                url: "/generate/rsa",
+                url: "/generate/rsa-generate",
                 icon: null,
-                name: "RSA",
+                name: "RSA 生成",
                 subMenus: null,
             },
         ],
