@@ -3,16 +3,17 @@ import {
     LogoutOutlined,
     SettingOutlined,
     InfoCircleOutlined,
+    GithubOutlined,
+    TeamOutlined,
 } from "@ant-design/icons";
-import { Avatar, Button, Dropdown, Menu, Modal, Typography } from "antd";
+import { Avatar, Button, Dropdown, Modal, Tooltip, Typography } from "antd";
 import type { MenuProps } from "antd";
 import React from "react";
 import { changeLogoutStatus, selectProfile } from "@project-self/rtk/oidc";
 import { redirectToLogout } from "@project-self/utils/auth";
 import { useDispatch, useSelector } from "react-redux";
 import { AsyncStatus } from "@project-self/types/async-status";
-import { useNavigate } from "react-router-dom";
-import useAccess from "@project-self/hooks/useAccess";
+import { Link, useNavigate } from "react-router-dom";
 const { confirm } = Modal;
 
 export enum RightSettingType {
@@ -77,6 +78,11 @@ const RightHeader = () => {
                 icon={<NotificationOutlined />}
                 onClick={() => navigate("/notification")}
             />
+            <Link to={"/contributors"}>
+                <Tooltip title={"Contributors"} placement={"bottom"}>
+                    <Button shape="circle" icon={<TeamOutlined />} />
+                </Tooltip>
+            </Link>
             {profile?.picture != undefined && <Avatar src={profile?.picture} />}
             {profile?.name != undefined && (
                 <Typography.Text style={{ color: "white" }}>
@@ -94,6 +100,15 @@ const RightHeader = () => {
                 <Button shape="circle" icon={<SettingOutlined />} />
                 {/*<SettingOutlined className={'text-2xl text-white cursor-pointer'} />*/}
             </Dropdown>
+            <Link
+                to={"https://github.com/nextstarproject/tools-fe"}
+                target={"_blank"}
+                rel={"nofollow noopener noreferrer"}
+            >
+                <Tooltip title={"Github"} placement={"bottom"}>
+                    <Button shape="circle" icon={<GithubOutlined />} />
+                </Tooltip>
+            </Link>
         </div>
     );
 };
