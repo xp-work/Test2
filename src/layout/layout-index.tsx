@@ -126,7 +126,7 @@ const LayoutIndex = () => {
                             <Typography.Link
                                 href="https://github.com/nextstarproject"
                                 target="_blank"
-                                rel={"noreferrer noopener "}
+                                rel={"nofollow noreferrer noopener"}
                             >
                                 @NextStarProject
                             </Typography.Link>
