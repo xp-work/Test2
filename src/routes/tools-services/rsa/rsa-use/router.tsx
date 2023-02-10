@@ -3,7 +3,7 @@ import { LazyImportComponent } from "@project-self/components/lazy-import-compon
 import { AppRouteObject } from "@project-self/routes/app-routes";
 
 const RsaUseLazy = React.lazy(
-    () => import("src/routes/tools-services/rsa-use/rsa-use")
+    () => import("@project-self/routes/tools-services/rsa/rsa-use/rsa-use")
 );
 
 const RsaUseRouter: AppRouteObject = {

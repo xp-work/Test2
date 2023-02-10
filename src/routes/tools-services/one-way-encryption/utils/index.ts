@@ -63,3 +63,12 @@ export const CryptoOneWayEncryption = (
             return "";
     }
 };
+
+export const SingleCryptoOneWayEncryption = (text: string): string => {
+    return CryptoOneWayEncryption(
+        OneWayEncryptionType.SHA256,
+        FormatType.Text,
+        FormatType.Base64,
+        text
+    );
+};
