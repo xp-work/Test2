@@ -72,7 +72,6 @@ const LayoutIndex = () => {
         initAllApi();
     }, []);
 
-    console.log(token.colorPrimary);
     return (
         <>
             {isLoading && <GlobalLoading />}
@@ -123,13 +122,13 @@ const LayoutIndex = () => {
                             }
                             style={{ backgroundColor: token.colorBgElevated }}
                         >
-                            Copyright © 2022-2022 &nbsp;
+                            Copyright © 2022-2023 &nbsp;
                             <Typography.Link
-                                href="https://github.com/SpiritLing"
+                                href="https://github.com/nextstarproject"
                                 target="_blank"
-                                rel={"noreferrer noopener "}
+                                rel={"nofollow noreferrer noopener"}
                             >
-                                @SpiritLing
+                                @NextStarProject
                             </Typography.Link>
                         </footer>
                     </Layout>
