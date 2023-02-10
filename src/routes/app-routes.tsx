@@ -46,9 +46,10 @@ export const withoutPermissionPageRoutes: AppRouteObject[] = [
     DashboardRouter,
 ];
 
-const PublicRoutes: RouteObject[] = getLoginStatus()
+const PublicWithoutLayoutRoutes: RouteObject[] = getLoginStatus()
     ? [SignInCallbackRoute, SignOutCallbackRoute]
     : [];
+
 export const PrivatePageRoutes = withPermissionPageRoutes.concat(
     withoutPermissionPageRoutes
 );
@@ -76,12 +77,12 @@ export const getAppRoutes = ({
 }): RouteObject[] => {
     return isLoggedIn
         ? [
-              ...PublicRoutes,
+              ...PublicWithoutLayoutRoutes,
               {
                   element: <LayoutConfig />,
                   children: [...PrivatePageRoutes, NotFoundRoutes],
               },
               DashboardRouter,
           ]
-        : [...PublicRoutes, ...PrivatePageRoutes, NotFoundRoutes];
+        : [...PublicWithoutLayoutRoutes, ...PrivatePageRoutes, NotFoundRoutes];
 };

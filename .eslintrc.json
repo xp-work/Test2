@@ -32,5 +32,6 @@
             "error",
             { "ts-expect-error": "allow-with-description" }
         ]
-    }
+    },
+    "ignorePatterns": ["node_modules/**"]
 }
