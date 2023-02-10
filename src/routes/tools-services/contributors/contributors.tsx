@@ -13,6 +13,7 @@ const Contributors = () => {
                             to={`https://github.com/${x.name}`}
                             title={x.name}
                             target={"_blank"}
+                            rel={"nofollow noopener noreferrer"}
                         >
                             <Tooltip key={x.userId} title={x.name}>
                                 <Avatar
