@@ -43,7 +43,7 @@ jobs:
           overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
+          NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PREVIEW_ID }}
         timeout-minutes: 1
 
       - name: Create commit comment
