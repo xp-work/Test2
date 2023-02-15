@@ -77,9 +77,9 @@ const Dashboard = () => {
                         </NavLink>
                     </Col>
                     <Col span={6} className={"px-3"}>
-                        <NavLink to={"/generate/rsa"}>
+                        <NavLink to={"/generate/rsa-generate"}>
                             <Card
-                                title={"RSA"}
+                                title={"RSA 生成"}
                                 hoverable={true}
                                 className={"w-full h-full"}
                             >
