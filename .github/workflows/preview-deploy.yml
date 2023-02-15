@@ -32,7 +32,7 @@ jobs:
           pnpm run build
 
       - name: Deploy to Netlify
-        uses: nnwtgck/actions-netlify@v2.0.0
+        uses: nwtgck/actions-netlify@v2.0.0
         with:
           publish-dir: 'dist'
           production-deploy: false
