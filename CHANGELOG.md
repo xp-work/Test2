@@ -2,11 +2,16 @@
 
 严格遵循 [Semantic Versioning 2.0.0](http://semver.org/lang/zh-CN/) 语义化版本规范。
 
-```typescript
-type a = {
-    id:string
-}
-```
+## 1.2.0
+`2023-02-15`
+
+- 添加RSA非对称加密密钥生成
+- 在线RSA非对称加解密
+- 其他
+  - 添加协作者页面
+  - 添加更新日志页面
+  - 添加项目地址跳转
+
 
 ## 1.1.1
 
