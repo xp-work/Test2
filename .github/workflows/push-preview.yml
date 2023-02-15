@@ -2,10 +2,12 @@ name: Deploy preview
 
 on:
   push:
-    branches: [ "dev" ]
+    branches: [ "dev", "release/**" ]
 
 permissions:
-  contents: read
+  contents: write
+  pull-requests: write
+  statuses: write
 
 jobs:
   preview-deploy:
@@ -30,11 +32,22 @@ jobs:
           pnpm run build
 
       - name: Deploy to Netlify
-        uses: nwtgck/actions-netlify@v1.2
+        id: netlify
+        uses: nwtgck/actions-netlify@v2.0.0
         with:
           publish-dir: 'dist'
           production-deploy: false
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          enable-commit-status: true
+          overwrites-pull-request-comment: true
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
+          NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PREVIEW_ID }}
         timeout-minutes: 1
+
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            🚀 Deploy on ${{ steps.netlify.outputs.deploy-url }}

@@ -15,6 +15,8 @@ import relativeTime from "dayjs/plugin/relativeTime";
 import LocalizedFormat from "dayjs/plugin/localizedFormat";
 import "dayjs/locale/zh";
 
+import "./markdown.css";
+
 dayjs.extend(relativeTime);
 dayjs.extend(LocalizedFormat);
 dayjs.locale("zh-cn");

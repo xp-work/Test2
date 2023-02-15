@@ -8,6 +8,7 @@ export const menuList: MenuItem[] = [
         name: "仪表板",
         subMenus: [],
     },
+
     {
         id: 200010000,
         url: null,
@@ -26,6 +27,13 @@ export const menuList: MenuItem[] = [
                 url: "/safety/hmac",
                 icon: null,
                 name: "HMAC",
+                subMenus: null,
+            },
+            {
+                id: 200010030,
+                url: "/safety/rsa-use",
+                icon: null,
+                name: "RSA 加解密",
                 subMenus: null,
             },
         ],
@@ -50,6 +58,20 @@ export const menuList: MenuItem[] = [
                 name: "Guid",
                 subMenus: null,
             },
+            {
+                id: 200020030,
+                url: "/generate/rsa-generate",
+                icon: null,
+                name: "RSA 生成",
+                subMenus: null,
+            },
         ],
+    },
+    {
+        id: -100000,
+        url: "/changes",
+        icon: "nsp-training",
+        name: "更新日志",
+        subMenus: [],
     },
 ];
