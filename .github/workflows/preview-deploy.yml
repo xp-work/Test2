@@ -32,6 +32,7 @@ jobs:
           pnpm run build
 
       - name: Deploy to Netlify
+        id: netlify
         uses: nwtgck/actions-netlify@v2.0.0
         with:
           publish-dir: 'dist'
@@ -44,3 +45,9 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NSP_NETLIFY_ACCESS_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NSP_NETLIFY_PROD_ID }}
         timeout-minutes: 1
+
+      - name: Create commit comment
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            🚀 Deploy on ${{ steps.netlify.outputs.deploy-url }}
