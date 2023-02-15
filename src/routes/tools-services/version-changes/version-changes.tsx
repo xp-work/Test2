@@ -44,12 +44,12 @@ const VersionChanges = () => {
                         );
                     },
                 });
-                setMdText(md.render(x));
+                const htmlText = md.render(x);
+                setMdText(htmlText);
             });
     }, []);
     return (
-        <section>
-            <p>version-changes</p>
+        <section className={"bg-white"}>
             <p
                 className={"nsp-markdown"}
                 dangerouslySetInnerHTML={{ __html: mdText }}
