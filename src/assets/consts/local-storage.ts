@@ -19,6 +19,7 @@ export const DefaultRouteBreadcrumb: Record<string, string> = {
     "/safety/one-way-encryption": "单向加密",
     "/safety/hmac": "HMAC",
     "/safety/hmac/11": "HMAC11",
+    "/safety/rsa-use": "RSA 加解密",
 };
 
 export const ApiToken = "PRh7eQ7K7OUJVZPDnR9ihcMe2VMS93OL";
