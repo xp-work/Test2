@@ -8,6 +8,7 @@ export const menuList: MenuItem[] = [
         name: "仪表板",
         subMenus: [],
     },
+
     {
         id: 200010000,
         url: null,
@@ -65,5 +66,12 @@ export const menuList: MenuItem[] = [
                 subMenus: null,
             },
         ],
+    },
+    {
+        id: -100000,
+        url: "/changes",
+        icon: "nsp-training",
+        name: "更新日志",
+        subMenus: [],
     },
 ];

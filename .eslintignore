@@ -5,6 +5,7 @@ src/**/*.scss
 src/**/*.svg
 src/**/*.png
 src/**/*.jpg
+src/**/*.css
 
 package.json
 dist

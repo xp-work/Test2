@@ -6,6 +6,7 @@ import UuidPageRouter from "./uuid-page/router";
 import RsaGenerateRouter from "@project-self/routes/tools-services/rsa/rsa-generate/router";
 import RsaUseRouter from "@project-self/routes/tools-services/rsa/rsa-use/router";
 import ContributorsRouter from "./contributors/router";
+import VersionChangesPageRouter from "@project-self/routes/tools-services/version-changes/router";
 
 export const ToolsServices: AppRouteObject[] = [
     HmacRouter,
@@ -15,4 +16,5 @@ export const ToolsServices: AppRouteObject[] = [
     RsaGenerateRouter,
     RsaUseRouter,
     ContributorsRouter,
+    VersionChangesPageRouter,
 ];
