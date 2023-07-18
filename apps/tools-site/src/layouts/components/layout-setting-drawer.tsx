@@ -41,7 +41,7 @@ const LayoutSettingDrawer = () => {
 					>
 						{ThemeColorArray.map((x, i) => (
 							<Select.Option key={x} value={x}>
-								<div className={"inline-block flex items-center"}>
+								<div className={"flex items-center"}>
 									<div
 										className={"inline-block w-4 h-4"}
 										style={{ backgroundColor: x }}
