@@ -17,6 +17,7 @@ type DynamicIconProps = {
 /**
  * This component can be used to infer Icon from {@link https://www.iconfont.cn/ | IconFont} and {@link https://iconpark.oceanengine.com/home | IconPark}
  * @param props
+ * @param icon iconpark
  * @returns
  */
 const DynamicIcon = (props: DynamicIconProps) => {
@@ -38,7 +39,7 @@ const DynamicIcon = (props: DynamicIconProps) => {
 				style={{
 					...style,
 				}}
-				className={`${icon == "iconfont" ? "icon" : "iconpark-icon"} ${className}`}
+				className={`${icon == "iconfont" ? "icon" : "iconpark-icon"}${" " + className}`}
 				aria-hidden
 			>
 				<use xlinkHref={`#${type}`} />

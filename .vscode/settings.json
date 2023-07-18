@@ -2,7 +2,7 @@
 	"editor.formatOnSave": true,
 	"cSpell.words": ["antd", "fingerprintjs", "Oidc"],
 	"cSpell.enableFiletypes": ["typescript"],
-	"i18n-ally.localesPaths": ["apps/admin-oidc/src/locales"],
+	"i18n-ally.localesPaths": ["apps/tools-site/src/locales"],
 	"i18n-ally.sortKeys": true,
 	"i18n-ally.enabledFrameworks": ["i18next", "react"],
 	"i18n-ally.sourceLanguage": "zh-CN",

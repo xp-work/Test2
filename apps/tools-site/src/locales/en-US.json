@@ -8,9 +8,11 @@
 		"ThemeSettingDrawerText1": "This is only shown in the development environment, quick operation, in the official environment will be possible to move to personal settings or other places, please user self-determination!",
 		"ThemeSettingDrawerText2": "If you want to fix the style, please change the default global state.",
 		"ThemeSettingDrawerSelectTheme": "Theme Selection",
-		"ThemeSettingDrawerDarkTheme": "Dark Themes",
-		"ThemeSettingDrawerEnableDarkTheme": "Enable dark theme",
-		"ThemeSettingDrawerSelectLanguage": "Language Selection"
+		"ThemeSettingDrawerDarkTheme": "Night Themes",
+		"ThemeSettingDrawerEnableDarkTheme": "Enable night theme",
+		"ThemeSettingDrawerSelectLanguage": "Language Selection",
+		"NightTheme": "Night theme",
+		"DayTheme": "Day theme"
 	},
 	"Route": {
 		"Dashboard": "Dashboard",

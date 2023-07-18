@@ -1,11 +1,13 @@
 import { Button, Dropdown, MenuProps, Space, Tooltip } from "antd";
-import { GlobalOutlined, TranslationOutlined } from "@ant-design/icons";
+import { GithubOutlined, GlobalOutlined, TranslationOutlined } from "@ant-design/icons";
 import { useAppDispatch, useAppSelector } from "@project-self/store/store";
 import { selectGlobalState } from "@project-self/store/selector";
-import { setLanguage } from "@project-self/rtk/global-slice";
+import { setLanguage, setThemeDark } from "@project-self/rtk/global-slice";
 import { Languages, useTranslation } from "nsp-i18n";
 import { setSettingDrawer } from "../rtk/layout-slice";
 import { useCallback } from "react";
+import DynamicIcon from "@project-self/components/dynamic-icon/dynamic-icon";
+import { useNavigate } from "react-router-dom";
 
 /**
  * @description 语言下拉菜单
@@ -29,6 +31,7 @@ const LayoutHeaderRight = () => {
 	const { t } = useTranslation();
 	const globalState = useAppSelector(selectGlobalState);
 	const dispatch = useAppDispatch();
+	const navigate = useNavigate();
 
 	const handleLanguageMenuClick = useCallback(
 		(e: any) => {
@@ -50,6 +53,22 @@ const LayoutHeaderRight = () => {
 						/>
 					</Tooltip>
 				)}
+				{import.meta.env.NSP_THEME_CONFIG == "true" &&
+					(globalState.theme.isDark ? (
+						<Tooltip placement="bottom" title={t("Layout.DayTheme")}>
+							<Button
+								icon={<DynamicIcon type="sun-one" />}
+								onClick={() => dispatch(setThemeDark(false))}
+							/>
+						</Tooltip>
+					) : (
+						<Tooltip placement="bottom" title={t("Layout.NightTheme")}>
+							<Button
+								icon={<DynamicIcon type="moon" />}
+								onClick={() => dispatch(setThemeDark(true))}
+							/>
+						</Tooltip>
+					))}
 				{import.meta.env.NSP_LANGUAGE == "true" && (
 					<Dropdown
 						menu={{
@@ -61,6 +80,12 @@ const LayoutHeaderRight = () => {
 						<Button icon={<TranslationOutlined />} />
 					</Dropdown>
 				)}
+				<Button
+					icon={<GithubOutlined />}
+					href={"https://github.com/nextstarproject/tools-fe"}
+					target={"_blank"}
+					rel={"nofollow noreferrer noopener"}
+				/>
 			</Space>
 		</div>
 	);

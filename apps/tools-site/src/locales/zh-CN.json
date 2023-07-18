@@ -8,9 +8,11 @@
 		"ThemeSettingDrawerText1": "此处只在开发环境下显示，快捷操作，在正式环境将可能移动到个人设置或者其他地方，请使用者自我决定",
 		"ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可",
 		"ThemeSettingDrawerSelectTheme": "主题选择",
-		"ThemeSettingDrawerDarkTheme": "黑暗主题",
-		"ThemeSettingDrawerEnableDarkTheme": "启用黑暗主题",
-		"ThemeSettingDrawerSelectLanguage": "语言选择"
+		"ThemeSettingDrawerDarkTheme": "夜间主题",
+		"ThemeSettingDrawerEnableDarkTheme": "启用夜间主题",
+		"ThemeSettingDrawerSelectLanguage": "语言选择",
+		"NightTheme": "夜间主题",
+		"DayTheme": "日间主题"
 	},
 	"Route": {
 		"Dashboard": "仪表板",
