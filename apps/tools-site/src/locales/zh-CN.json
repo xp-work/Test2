@@ -1,0 +1,22 @@
+{
+	"COMMON": {
+		"LANGUAGE": "English",
+		"LANGUAGE_EMOJI": "🇺🇸 English"
+	},
+	"Layout": {
+		"ThemeGlobalSetting": "全局配置",
+		"ThemeSettingDrawerText1": "此处只在开发环境下显示，快捷操作，在正式环境将可能移动到个人设置或者其他地方，请使用者自我决定",
+		"ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可",
+		"ThemeSettingDrawerSelectTheme": "主题选择",
+		"ThemeSettingDrawerDarkTheme": "黑暗主题",
+		"ThemeSettingDrawerEnableDarkTheme": "启用黑暗主题",
+		"ThemeSettingDrawerSelectLanguage": "语言选择"
+	},
+	"Route": {
+		"Dashboard": "仪表板",
+		"Tags": "标签",
+		"TagDetail": "标签详情"
+	},
+	"Test": "测试",
+	"LOADING_TEXT": "加载中..."
+}

@@ -1,0 +1,22 @@
+{
+	"COMMON": {
+		"LANGUAGE": "中文",
+		"LANGUAGE_EMOJI": "🇨🇳 中文"
+	},
+	"Layout": {
+		"ThemeGlobalSetting": "Global Configuration",
+		"ThemeSettingDrawerText1": "This is only shown in the development environment, quick operation, in the official environment will be possible to move to personal settings or other places, please user self-determination!",
+		"ThemeSettingDrawerText2": "If you want to fix the style, please change the default global state.",
+		"ThemeSettingDrawerSelectTheme": "Theme Selection",
+		"ThemeSettingDrawerDarkTheme": "Dark Themes",
+		"ThemeSettingDrawerEnableDarkTheme": "Enable dark theme",
+		"ThemeSettingDrawerSelectLanguage": "Language Selection"
+	},
+	"Route": {
+		"Dashboard": "Dashboard",
+		"Tags": "标签",
+		"TagDetail": "标签详情"
+	},
+	"Test": "Test",
+	"LOADING_TEXT": "Loading..."
+}

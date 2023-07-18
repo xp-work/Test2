@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<link rel="icon" type="image/svg+xml" href="/ns-ico.svg" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Admin Oidc</title>
+	</head>
+	<body>
+		<div id="root"></div>
+		<script src="/config.js"></script>
+		<script type="module" src="/src/main.tsx"></script>
+		<!--  共通脚本  -->
+		<script>
+			window._LANGUAGE_ =
+				window.navigator.language || window.navigator.userLanguage || "zh-CN";
+			if (_LANGUAGE_ !== "zh-CN" && _LANGUAGE_ !== "en-US") {
+				_LANGUAGE_ = "zh-CN";
+			}
+		</script>
+		<!--  icon  -->
+		<script>
+			(function () {
+				var iconfont = document.createElement("script");
+				iconfont.src = window._ICON_FONT_URL_;
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(iconfont, s);
+
+				var iconpark = document.createElement("script");
+				iconpark.src = window._ICON_PARK_URL_;
+				var s = document.getElementsByTagName("script")[0];
+				s.parentNode.insertBefore(iconpark, s);
+			})();
+		</script>
+
+		<!--  百度统计  -->
+		<script>
+			var isBaiduCount = "%NSP_BAIDU_COUNT%";
+			if (isBaiduCount === "true") {
+				var _hmt = _hmt || [];
+				if (window._BAIDU_COUNT_ !== "") {
+					(function () {
+						var hm = document.createElement("script");
+						hm.src = window._BAIDU_COUNT_;
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(hm, s);
+					})();
+				}
+			}
+		</script>
+
+		<!-- Google tag (gtag.js) -->
+		<script>
+			var isGoogleTag = "%NSP_GOOGLE_TAG%";
+
+			if (isGoogleTag === "true") {
+				if (window._GOOGLE_TAG_ !== "") {
+					(function () {
+						var hm = document.createElement("script");
+						hm.src =
+							"https://www.googletagmanager.com/gtag/js?id=" + window._GOOGLE_TAG_;
+						var s = document.getElementsByTagName("script")[0];
+						s.parentNode.insertBefore(hm, s);
+					})();
+				}
+
+				window.dataLayer = window.dataLayer || [];
+				if (window._GOOGLE_TAG_ !== "") {
+					window._googleTag = function () {
+						dataLayer.push(arguments);
+					};
+					_googleTag("js", new Date());
+
+					_googleTag("config", window._GOOGLE_TAG_);
+				}
+			}
+		</script>
+	</body>
+</html>
