@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<link rel="icon" type="image/svg+xml" href="/ns-ico.svg" />
 		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>Admin Oidc</title>
+		<title>NextStar Tools</title>
 	</head>
 	<body>
 		<div id="root"></div>
@@ -18,18 +18,22 @@
 				_LANGUAGE_ = "zh-CN";
 			}
 		</script>
-		<!--  icon  -->
+		<!--  icon font  -->
 		<script>
 			(function () {
 				var iconfont = document.createElement("script");
 				iconfont.src = window._ICON_FONT_URL_;
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(iconfont, s);
-
+				var s = document.getElementsByTagName("body")[0];
+				s.appendChild(iconfont);
+			})();
+		</script>
+		<!--  icon park  -->
+		<script>
+			(function () {
 				var iconpark = document.createElement("script");
 				iconpark.src = window._ICON_PARK_URL_;
-				var s = document.getElementsByTagName("script")[0];
-				s.parentNode.insertBefore(iconpark, s);
+				var s = document.getElementsByTagName("body")[0];
+				s.appendChild(iconpark);
 			})();
 		</script>
 
@@ -42,8 +46,8 @@
 					(function () {
 						var hm = document.createElement("script");
 						hm.src = window._BAIDU_COUNT_;
-						var s = document.getElementsByTagName("script")[0];
-						s.parentNode.insertBefore(hm, s);
+						var s = document.getElementsByTagName("body")[0];
+						s.appendChild(hm);
 					})();
 				}
 			}
@@ -56,11 +60,11 @@
 			if (isGoogleTag === "true") {
 				if (window._GOOGLE_TAG_ !== "") {
 					(function () {
-						var hm = document.createElement("script");
-						hm.src =
+						var gtag = document.createElement("script");
+						gtag.src =
 							"https://www.googletagmanager.com/gtag/js?id=" + window._GOOGLE_TAG_;
-						var s = document.getElementsByTagName("script")[0];
-						s.parentNode.insertBefore(hm, s);
+						var s = document.getElementsByTagName("body")[0];
+						s.appendChild(gtag);
 					})();
 				}
 

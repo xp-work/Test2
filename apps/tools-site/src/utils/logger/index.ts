@@ -39,7 +39,10 @@ const basic = (
 		date: dayjs().format(),
 	};
 
-	if (import.meta.env.NSP_SENTRY == "true") {
+	if (
+		import.meta.env.NSP_SENTRY == "true" &&
+		(level == "fatal" || level == "error" || level == "warning")
+	) {
 		Sentry.withScope((scope) => {
 			scope.setLevel(level);
 			if (window._FINGERPRINT_ != undefined) {

@@ -148,6 +148,136 @@ importers:
         specifier: ^4.2.0
         version: 4.2.0(typescript@4.9.5)(vite@4.4.4)
 
+  apps/tools-site:
+    dependencies:
+      '@ant-design/icons':
+        specifier: ^5.1.4
+        version: 5.1.4(react-dom@18.2.0)(react@18.2.0)
+      '@ant-design/pro-components':
+        specifier: ^2.6.5
+        version: 2.6.5(antd@5.7.0)(rc-field-form@1.34.2)(react-dom@18.2.0)(react@18.2.0)
+      '@fingerprintjs/fingerprintjs':
+        specifier: ^3.4.2
+        version: 3.4.2
+      '@reduxjs/toolkit':
+        specifier: ^1.9.5
+        version: 1.9.5(react-redux@8.1.1)(react@18.2.0)
+      '@sentry/browser':
+        specifier: ^7.58.1
+        version: 7.58.1
+      '@sentry/react':
+        specifier: ^7.58.1
+        version: 7.58.1(react@18.2.0)
+      ahooks:
+        specifier: ^3.7.8
+        version: 3.7.8(react@18.2.0)
+      antd:
+        specifier: ^5.7.0
+        version: 5.7.0(react-dom@18.2.0)(react@18.2.0)
+      axios:
+        specifier: ^1.4.0
+        version: 1.4.0
+      classnames:
+        specifier: ^2.3.2
+        version: 2.3.2
+      dayjs:
+        specifier: ^1.11.9
+        version: 1.11.9
+      lodash:
+        specifier: ^4.17.21
+        version: 4.17.21
+      nsp-i18n:
+        specifier: workspace:^
+        version: link:../../configs/nsp-i18n
+      oidc-client:
+        specifier: ^1.11.5
+        version: 1.11.5
+      prop-types:
+        specifier: ^15.8.1
+        version: 15.8.1
+      react:
+        specifier: ^18.2.0
+        version: 18.2.0
+      react-dom:
+        specifier: ^18.2.0
+        version: 18.2.0(react@18.2.0)
+      react-redux:
+        specifier: ^8.1.1
+        version: 8.1.1(@types/react-dom@18.2.7)(@types/react@18.2.15)(react-dom@18.2.0)(react@18.2.0)(redux@4.2.1)
+      react-router-dom:
+        specifier: ^6.14.1
+        version: 6.14.1(react-dom@18.2.0)(react@18.2.0)
+      redux-oidc:
+        specifier: 4.0.0-beta1
+        version: 4.0.0-beta1(oidc-client@1.11.5)(prop-types@15.8.1)(react@18.2.0)
+      store2:
+        specifier: ^2.14.2
+        version: 2.14.2
+    devDependencies:
+      '@types/lodash':
+        specifier: ^4.14.195
+        version: 4.14.195
+      '@types/node':
+        specifier: ^18.16.19
+        version: 18.16.19
+      '@types/react':
+        specifier: ^18.2.15
+        version: 18.2.15
+      '@types/react-dom':
+        specifier: ^18.2.7
+        version: 18.2.7
+      '@types/redux-logger':
+        specifier: ^3.0.9
+        version: 3.0.9
+      '@types/rollup-plugin-visualizer':
+        specifier: ^4.2.1
+        version: 4.2.1
+      '@typescript-eslint/eslint-plugin':
+        specifier: ^5.62.0
+        version: 5.62.0(@typescript-eslint/parser@5.62.0)(eslint@8.45.0)(typescript@4.9.5)
+      '@typescript-eslint/parser':
+        specifier: ^5.62.0
+        version: 5.62.0(eslint@8.45.0)(typescript@4.9.5)
+      '@vitejs/plugin-react':
+        specifier: ^3.1.0
+        version: 3.1.0(vite@4.4.4)
+      autoprefixer:
+        specifier: ^10.4.14
+        version: 10.4.14(postcss@8.4.26)
+      nsp-lint:
+        specifier: workspace:^
+        version: link:../../configs/nsp-lint
+      nsp-styling:
+        specifier: workspace:^
+        version: link:../../configs/nsp-styling
+      postcss:
+        specifier: ^8.4.26
+        version: 8.4.26
+      redux-logger:
+        specifier: ^3.0.6
+        version: 3.0.6
+      rollup-plugin-visualizer:
+        specifier: ^5.9.2
+        version: 5.9.2
+      sass:
+        specifier: ^1.63.6
+        version: 1.63.6
+      tailwindcss:
+        specifier: ^3.3.3
+        version: 3.3.3
+      typescript:
+        specifier: ^4.9.5
+        version: 4.9.5
+      vite:
+        specifier: ^4.4.4
+        version: 4.4.4(@types/node@18.16.19)(sass@1.63.6)
+      vite-plugin-svgr:
+        specifier: ^3.2.0
+        version: 3.2.0(vite@4.4.4)
+      vite-tsconfig-paths:
+        specifier: ^4.2.0
+        version: 4.2.0(typescript@4.9.5)(vite@4.4.4)
+
   configs/nsp-i18n:
     dependencies:
       i18next:

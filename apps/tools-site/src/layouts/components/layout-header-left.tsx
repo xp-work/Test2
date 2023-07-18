@@ -1,27 +1,26 @@
-import { Button, Menu, MenuProps, theme } from "antd";
-import DynamicIcon from "@project-self/components/dynamic-icon/dynamic-icon";
-import React from "react";
-
-const items1: MenuProps["items"] = ["1", "2", "3"].map((key) => ({
-	key,
-	label: `nav ${key}`,
-}));
+import { Button, theme } from "antd";
+import { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
+import { ReactComponent as NsLogo } from "@project-self/assets/ns-logo.svg";
+import { Link } from "react-router-dom";
 
 const LayoutHeaderLeft = () => {
 	const {
-		token: { colorBgContainer },
+		token: { colorPrimary },
 	} = theme.useToken();
 	return (
 		<div className={"flex flex-row items-center flex-1 h-full"}>
-			<div className="logo" />
-			<Button icon={<DynamicIcon type={"application-menu"} icon={"iconpark"} />} />
-			<Menu
-				className={"flex-1"}
-				style={{ backgroundColor: colorBgContainer }}
-				mode="horizontal"
-				defaultSelectedKeys={["2"]}
-				items={items1}
-			/>
+			<Button icon={<DynamicAntIcon type={"nsp-menu-application"} />} />
+			<Link
+				to={"/"}
+				className={
+					"flex w-48 mx-4 h-12 rounded transition-all ease-in-out duration-300 hover:bg-gray-300 dark:hover:bg-slate-800"
+				}
+			>
+				<NsLogo
+					className={"w-full"}
+					style={{ color: colorPrimary, backgroundColor: "transparent" }}
+				/>
+			</Link>
 		</div>
 	);
 };

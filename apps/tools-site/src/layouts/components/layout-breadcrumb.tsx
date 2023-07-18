@@ -1,6 +1,6 @@
 import { HomeOutlined } from "@ant-design/icons";
 import { PrivatePageRoutes } from "@project-self/routes/routes";
-import { selectLayoutState } from "@project-self/store/selector";
+import { selectGlobalState, selectLayoutState } from "@project-self/store/selector";
 import { useAppSelector } from "@project-self/store/store";
 import { Breadcrumb, theme } from "antd";
 import { ItemType } from "antd/es/breadcrumb/Breadcrumb";
@@ -13,6 +13,7 @@ const LayoutBreadcrumb = () => {
 	const { t } = useTranslation();
 	const location = useLocation();
 	const layoutState = useAppSelector(selectLayoutState);
+	const globalState = useAppSelector(selectGlobalState);
 	const {
 		token: { colorPrimaryBg, colorText },
 	} = theme.useToken();
@@ -79,7 +80,7 @@ const LayoutBreadcrumb = () => {
 			}
 		}
 		setBreadcrumbItems(tmpBreadcrumbItems);
-	}, [location, layoutState.breadcrumb]);
+	}, [location, layoutState.breadcrumb, globalState.language]);
 
 	return (
 		<Breadcrumb
