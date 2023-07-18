@@ -1,4 +1,4 @@
-var _ICON_FONT_URL_ = "//at.alicdn.com/t/c/font_3501696_29xxp96qf7j.js";
+var _ICON_FONT_URL_ = "//at.alicdn.com/t/c/font_3501696_fewr4ttysjg.js";
 var _ICON_PARK_URL_ =
 	"//lf1-cdn-tos.bytegoofy.com/obj/iconpark/icons_15525_44.1756bac6b6407846e6cfc404955d05b2.js";
 var _BAIDU_COUNT_ = "";

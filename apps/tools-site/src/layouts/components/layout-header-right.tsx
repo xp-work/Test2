@@ -6,7 +6,7 @@ import { setLanguage, setThemeDark } from "@project-self/rtk/global-slice";
 import { Languages, useTranslation } from "nsp-i18n";
 import { setSettingDrawer } from "../rtk/layout-slice";
 import { useCallback } from "react";
-import DynamicIcon from "@project-self/components/dynamic-icon/dynamic-icon";
+import DynamicIcon, { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
 import { useNavigate } from "react-router-dom";
 
 /**
@@ -57,14 +57,14 @@ const LayoutHeaderRight = () => {
 					(globalState.theme.isDark ? (
 						<Tooltip placement="bottom" title={t("Layout.DayTheme")}>
 							<Button
-								icon={<DynamicIcon type="sun-one" />}
+								icon={<DynamicAntIcon type="nsp-icons-sun" />}
 								onClick={() => dispatch(setThemeDark(false))}
 							/>
 						</Tooltip>
 					) : (
 						<Tooltip placement="bottom" title={t("Layout.NightTheme")}>
 							<Button
-								icon={<DynamicIcon type="moon" />}
+								icon={<DynamicAntIcon type="nsp-Moon" />}
 								onClick={() => dispatch(setThemeDark(true))}
 							/>
 						</Tooltip>
