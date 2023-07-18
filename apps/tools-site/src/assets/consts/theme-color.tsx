@@ -4,29 +4,22 @@
  * dynmaic-icon 文件中
  * */
 export enum ThemeColor {
-    // 默认主题
-    Primary = "#1677ff",
-    Blue = "#1890ff",
-    Red = "#f5222d",
-    Orange = "#fa541c",
-    Yellow = "#faad14",
-    Green = "#00b96b",
+	// 默认主题
+	Primary = "#1677ff",
+	Blue = "#1890ff",
+	Red = "#f5222d",
+	Orange = "#fa541c",
+	Yellow = "#faad14",
+	Green = "#00b96b",
 }
 
 export const ThemeColorArray = [
-    ThemeColor.Primary,
-    ThemeColor.Blue,
-    ThemeColor.Red,
-    ThemeColor.Orange,
-    ThemeColor.Yellow,
-    ThemeColor.Green,
+	ThemeColor.Primary,
+	ThemeColor.Blue,
+	ThemeColor.Red,
+	ThemeColor.Orange,
+	ThemeColor.Yellow,
+	ThemeColor.Green,
 ];
 
-export const ThemeColorName = [
-    "科技色",
-    "拂晓",
-    "薄暮",
-    "火山",
-    "日暮",
-    "极光绿",
-];
+export const ThemeColorName = Object.keys(ThemeColor);

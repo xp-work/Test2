@@ -1,4 +1,4 @@
-import { defineConfig, loadEnv, PluginOption } from "vite";
+import { defineConfig, loadEnv } from "vite";
 import react from "@vitejs/plugin-react";
 import tsconfigPaths from "vite-tsconfig-paths";
 import { visualizer } from "rollup-plugin-visualizer";
@@ -12,7 +12,7 @@ export default function ({ mode }) {
 	// https://vitejs.dev/config/
 	const isDev = process.env.NODE_ENV !== "production";
 	return defineConfig({
-		base: "/nsp-admin-oidc/",
+		base: "/",
 		envPrefix: ["NSP_"],
 		plugins: [
 			react(),
@@ -56,7 +56,7 @@ export default function ({ mode }) {
 			_IS_DEV_: isDev,
 		},
 		server: {
-			port: 14002,
+			port: 14001,
 			host: true,
 		},
 		build: {

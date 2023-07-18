@@ -73,8 +73,8 @@ const LayoutSettingDrawer = () => {
 							onChange={(e) => dispatch(setLanguage(e.target.value))}
 							value={globalState.language}
 						>
-							<Radio value={"zh-CN"}>中文</Radio>
-							<Radio value={"en-US"}>English</Radio>
+							<Radio value={"zh-CN"}>🇨🇳 中文</Radio>
+							<Radio value={"en-US"}>🇺🇸 English</Radio>
 						</Radio.Group>
 					</Space>
 				)}
