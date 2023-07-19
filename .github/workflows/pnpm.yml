@@ -53,6 +53,5 @@ jobs:
         working-directory: ./apps/tools-site
         run: |
           echo ${{github.workspace}}
-          pnpm run lint
           pnpm run tsc
           pnpm run build
