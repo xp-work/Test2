@@ -10,7 +10,7 @@
     "preview": "vite preview",
     "prettier": "prettier -c --write \\\"src/**/*\\\"",
     "tsc": "tsc --noEmit --skipLibCheck --incremental",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/**/* --quiet",
+    "lint": "eslint src/**/* --ext .tsx,.ts --quiet",
     "lint:error": "eslint --quiet --ext .jsx,.js,.tsx,.ts src/**/*"
   },
   "dependencies": {

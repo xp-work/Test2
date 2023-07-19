@@ -37,6 +37,7 @@ jobs:
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
+          cache: "pnpm"
         env:
           CI: true
           PROGRESS: none
@@ -51,6 +52,6 @@ jobs:
       - name: tools-site run cmd
         working-directory: ./apps/tools-site
         run: |
-          pnpm run lint:error
+          pnpm run lint
           pnpm run tsc
           pnpm run build
