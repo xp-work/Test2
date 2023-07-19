@@ -35,7 +35,7 @@ const LayoutHeaderRight = () => {
 
 	const handleLanguageMenuClick = useCallback(
 		(e: any) => {
-			var selectLang = e.key as Languages;
+			const selectLang = e.key as Languages;
 			if (globalState.language != selectLang) {
 				dispatch(setLanguage(selectLang));
 			}

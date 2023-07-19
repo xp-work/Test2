@@ -9,7 +9,8 @@
     "build": "tsc && vite build",
     "preview": "vite preview",
     "prettier": "prettier -c --write \\\"src/**/*\\\"",
-    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/**/* --quiet"
+    "lint": "eslint --ext .jsx,.js,.tsx,.ts src/**/* --quiet",
+    "lint:error": "eslint --quiet --ext .jsx,.js,.tsx,.ts src/**/*"
   },
   "dependencies": {
     "@ant-design/icons": "^5.1.4",
