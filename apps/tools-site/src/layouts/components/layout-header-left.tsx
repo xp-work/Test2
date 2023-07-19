@@ -2,14 +2,23 @@ import { Button, theme } from "antd";
 import { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
 import { ReactComponent as NsLogo } from "@project-self/assets/ns-logo.svg";
 import { Link } from "react-router-dom";
+import { useAppDispatch } from "@project-self/store/store";
+import { setApplicationDrawer } from "../rtk/layout-slice";
 
 const LayoutHeaderLeft = () => {
 	const {
 		token: { colorPrimary },
 	} = theme.useToken();
+	const dispatch = useAppDispatch();
+	const handleOpenApplication = () => {
+		dispatch(setApplicationDrawer(true));
+	};
 	return (
 		<div className={"flex flex-row items-center flex-1 h-full"}>
-			<Button icon={<DynamicAntIcon type={"nsp-menu-application"} />} />
+			<Button
+				icon={<DynamicAntIcon type={"nsp-menu-application"} />}
+				onClick={handleOpenApplication}
+			/>
 			<Link
 				to={"/"}
 				className={

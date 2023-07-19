@@ -8,6 +8,7 @@ import LayoutSettingDrawer from "@project-self/layouts/components/layout-setting
 import LayoutBreadcrumb from "./components/layout-breadcrumb";
 import { useAppSelector } from "@project-self/store/store";
 import { selectGlobalState } from "@project-self/store/selector";
+import LayoutApplicationDrawer from "./components/layout-application-drawer";
 
 const LayoutMain = () => {
 	const location = useLocation();
@@ -46,6 +47,7 @@ const LayoutMain = () => {
 			<React.Fragment>
 				{/* 所有layout可能都调用的组件放在此处，通过rtk调用 */}
 				{import.meta.env.NSP_THEME_CONFIG == "true" && <LayoutSettingDrawer />}
+				<LayoutApplicationDrawer />
 			</React.Fragment>
 		</Layout>
 	);
