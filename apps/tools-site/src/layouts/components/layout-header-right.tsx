@@ -8,6 +8,7 @@ import { setSettingDrawer } from "../rtk/layout-slice";
 import { useCallback } from "react";
 import DynamicIcon, { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
 import { useNavigate } from "react-router-dom";
+import { AHrefRelAllNo } from "@project-self/assets/consts/html-tag-consts";
 
 /**
  * @description 语言下拉菜单
@@ -84,7 +85,7 @@ const LayoutHeaderRight = () => {
 					icon={<GithubOutlined />}
 					href={"https://github.com/nextstarproject/tools-fe"}
 					target={"_blank"}
-					rel={"nofollow noreferrer noopener"}
+					rel={AHrefRelAllNo}
 				/>
 			</Space>
 		</div>

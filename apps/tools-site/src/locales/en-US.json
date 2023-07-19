@@ -1,7 +1,8 @@
 {
 	"COMMON": {
 		"LANGUAGE": "中文",
-		"LANGUAGE_EMOJI": "🇨🇳 中文"
+		"LANGUAGE_EMOJI": "🇨🇳 中文",
+		"JumpLinkTo": "Jump link to"
 	},
 	"Layout": {
 		"ThemeGlobalSetting": "Global Configuration",
