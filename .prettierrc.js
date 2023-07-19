@@ -23,4 +23,12 @@ module.exports = {
 	// 箭头函数，只有一个参数的时候，也需要括号
 	arrowParens: "always",
 	endOfLine: "auto",
+	overrides: [
+		{
+			files: "*.yml",
+			options: {
+				tabWidth: 2,
+			},
+		},
+	],
 };
