@@ -13,7 +13,7 @@ const TagsRouter: AppRouteObject = {
 			path: ":id",
 			element: <TagDetail />,
 			permission: [],
-		},
+		} as AppRouteObject,
 	],
 };
 

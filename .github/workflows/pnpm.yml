@@ -47,9 +47,10 @@ jobs:
           echo ${{github.ref}}
           npm install -g pnpm
           pnpm config set store-dir ~/.pnpm-store
-          pnpm install --strict-peer-dependencies=false
+          pnpm install
       - name: tools-site run cmd
         working-directory: ./apps/tools-site
         run: |
           pnpm run lint:error
+          pnpm run tsc
           pnpm run build
