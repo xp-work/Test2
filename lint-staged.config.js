@@ -4,8 +4,8 @@
  * !@note the glob match key's resolve root path is the same path with .git. NOT Root Path.
  */
 module.exports = {
-	"projects/**/*.{js,ts,jsx,tsx}": ["eslint --color --fix"],
-	"projects/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["prettier --write"],
+	"apps/**/*.{js,ts,jsx,tsx}": ["eslint --color --fix"],
+	"apps/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["prettier --write"],
 	// 'projects/**/*.{ts,tsx}': ['tsc --noEmit'],
 	"packages/**/*.{js,jsx,ts,tsx,json,css,scss,md}": ["prettier --write"],
 	"packages/**/*.{js,ts,jsx,tsx}": ["eslint --color --fix"],

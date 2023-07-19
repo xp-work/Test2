@@ -48,12 +48,11 @@ jobs:
       - name: pnpm install
         run: |
           echo ${{github.ref}}
-          npm install -g pnpm
-          pnpm config set store-dir ~/.pnpm-store
           pnpm install
       - name: tools-site run cmd
         working-directory: ./apps/tools-site
         run: |
+          echo ${{github.workspace}}
           pnpm run lint
           pnpm run tsc
           pnpm run build
