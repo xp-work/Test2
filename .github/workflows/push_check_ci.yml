@@ -51,16 +51,16 @@ jobs:
         uses: peter-evans/commit-comment@v2
         with:
           body: |
-            ✅ Actions success!
+            ✅ ${{ matrix.os }} actions success!
       - name: Comment failure
         if: ${{ failure() }}
         uses: peter-evans/commit-comment@v2
         with:
           body: |
-            ❌ Actions failure!
+            ❌ ${{ matrix.os }} actions failure!
       - name: Comment cancelled
         if: ${{ cancelled() }}
         uses: peter-evans/commit-comment@v2
         with:
           body: |
-            🚫 Actions cancelled!
+            🚫 ${{ matrix.os }} actions cancelled!
