@@ -1,25 +1,29 @@
 {
-	"COMMON": {
-		"LANGUAGE": "English",
-		"LANGUAGE_EMOJI": "🇺🇸 English",
-		"JumpLinkTo": "跳转链接到"
-	},
-	"Layout": {
-		"ThemeGlobalSetting": "全局配置",
-		"ThemeSettingDrawerText1": "此处只在开发环境下显示，快捷操作，在正式环境将可能移动到个人设置或者其他地方，请使用者自我决定",
-		"ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可",
-		"ThemeSettingDrawerSelectTheme": "主题选择",
-		"ThemeSettingDrawerDarkTheme": "夜间主题",
-		"ThemeSettingDrawerEnableDarkTheme": "启用夜间主题",
-		"ThemeSettingDrawerSelectLanguage": "语言选择",
-		"NightTheme": "夜间主题",
-		"DayTheme": "日间主题"
-	},
-	"Route": {
-		"Dashboard": "仪表板",
-		"Tags": "标签",
-		"TagDetail": "标签详情"
-	},
-	"Test": "测试",
-	"LOADING_TEXT": "加载中..."
+  "COMMON": {
+    "LANGUAGE": "English",
+    "LANGUAGE_EMOJI": "🇺🇸 English",
+    "SITE_NAME": "次星工具"
+  },
+  "LOADING_TEXT": "加载中...",
+  "Layout": {
+    "Application": {
+      "JumpLinkTo": "跳转链接到",
+      "SiteOther": "次星 其他站点"
+    },
+    "DayTheme": "日间主题",
+    "NightTheme": "夜间主题",
+    "ThemeGlobalSetting": "全局配置",
+    "ThemeSettingDrawerDarkTheme": "夜间主题",
+    "ThemeSettingDrawerEnableDarkTheme": "启用夜间主题",
+    "ThemeSettingDrawerSelectLanguage": "语言选择",
+    "ThemeSettingDrawerSelectTheme": "主题选择",
+    "ThemeSettingDrawerText1": "此处只在开发环境下显示，快捷操作，在正式环境将可能移动到个人设置或者其他地方，请使用者自我决定",
+    "ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可"
+  },
+  "Route": {
+    "Dashboard": "仪表板",
+    "TagDetail": "标签详情",
+    "Tags": "标签"
+  },
+  "Test": "测试"
 }

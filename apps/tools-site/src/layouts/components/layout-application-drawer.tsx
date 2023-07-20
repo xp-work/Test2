@@ -46,7 +46,7 @@ const LayoutApplicationDrawer = () => {
 					<a
 						href={x.url}
 						target={x.target}
-						title={t("COMMON.JumpLinkTo") + x.name}
+						title={t("Layout.Application.JumpLinkTo") + x.name}
 						rel={x.rel ?? AHrefRelAllNo}
 						className={`${
 							globalState.theme.isDark ? "bg-slate-800" : "bg-white"
@@ -67,7 +67,7 @@ const LayoutApplicationDrawer = () => {
 
 	return (
 		<Drawer
-			title={"NextStar 其他站点"}
+			title={t("Layout.Application.SiteOther")}
 			placement="left"
 			onClose={onClose}
 			width={4 * 120}

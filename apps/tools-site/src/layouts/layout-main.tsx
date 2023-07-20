@@ -9,13 +9,19 @@ import LayoutBreadcrumb from "./components/layout-breadcrumb";
 import { useAppSelector } from "@project-self/store/store";
 import { selectGlobalState } from "@project-self/store/selector";
 import LayoutApplicationDrawer from "./components/layout-application-drawer";
+import { useTranslation } from "nsp-i18n";
 
 const LayoutMain = () => {
 	const location = useLocation();
+	const { t } = useTranslation();
 	const globalState = useAppSelector(selectGlobalState);
 	const {
 		token: { colorBgContainer, colorBgLayout, colorBorder, colorText },
 	} = theme.useToken();
+
+	useEffect(() => {
+		document.title = t("COMMON.SITE_NAME");
+	}, [globalState.language]);
 
 	return (
 		<Layout
