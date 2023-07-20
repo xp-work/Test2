@@ -24,7 +24,11 @@ const SignOutCallback = () => {
 
 	const errorCallback = useCallback(
 		(error: Error): void => {
-			Logger.LogError("Public", "SignOutCallback", "", error);
+			Logger.LogError({
+				controllerName: "sign-out-callback",
+				actionName: "callback",
+				error: error,
+			});
 			dispatch(changeLogoutStatus(AsyncStatus.Rejected));
 			navigate("/");
 		},

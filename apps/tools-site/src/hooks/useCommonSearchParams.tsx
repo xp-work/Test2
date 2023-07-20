@@ -29,7 +29,11 @@ export default function useCommonSearchParams<T>(
 			}
 		}
 	} catch (error) {
-		Logger.LogWarning("useCommonSearchParams", "parse params", "", error);
+		Logger.LogWarning({
+			controllerName: "useCommonSearchParams",
+			actionName: "parse params",
+			error: error,
+		});
 	}
 
 	const setParams = useCallback(
@@ -38,7 +42,11 @@ export default function useCommonSearchParams<T>(
 				searchParams.set(defaultParamsKey, encodeURIComponent(btoa(JSON.stringify(key))));
 				setSearchParams(searchParams);
 			} catch (error) {
-				Logger.LogWarning("useCommonSearchParams", "setParams", "", error);
+				Logger.LogWarning({
+					controllerName: "useCommonSearchParams",
+					actionName: "setParams",
+					error: error,
+				});
 			}
 		},
 		[searchParams]

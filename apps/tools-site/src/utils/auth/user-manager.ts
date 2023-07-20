@@ -40,7 +40,7 @@ export const loadOidcUser = (store: EnhancedStore): Promise<User> => {
  * @description 重定向至登录页面
  */
 export const redirectToLogin = debounce(() => {
-	Logger.LogInformation("oidc", "redirectToLogin", "");
+	Logger.LogInformation({ controllerName: "oidc", actionName: "redirectToLogin" });
 	userManager.signinRedirect();
 }, 3000);
 
@@ -48,7 +48,7 @@ export const redirectToLogin = debounce(() => {
  * @description 退出登录
  */
 export const redirectToLogout = once(async () => {
-	Logger.LogInformation("oidc", "redirectToLogout", "");
+	Logger.LogInformation({ controllerName: "oidc", actionName: "redirectToLogout" });
 	await userManager.clearStaleState();
 	removeToken();
 	await userManager.signoutRedirect();

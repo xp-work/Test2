@@ -28,7 +28,11 @@ const SignInCallback = () => {
 
 	const errorCallback = useCallback(
 		(error: Error): void => {
-			Logger.LogError("Public", "SignInCallback", "", error);
+			Logger.LogError({
+				controllerName: "sign-in-callback",
+				actionName: "callback",
+				error: error,
+			});
 
 			//try to FIX: LEYSERNEXT-838
 			//In some scene, users will save account url as a Bookmark. If the state param included in account url timeout. After login, will cause this type error.
