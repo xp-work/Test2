@@ -53,6 +53,6 @@ jobs:
         working-directory: ./apps/tools-site
         run: |
           echo ${{github.workspace}}
-          pnpm run lint:error
           pnpm run tsc
           pnpm run build
+          pnpm run lint:error
