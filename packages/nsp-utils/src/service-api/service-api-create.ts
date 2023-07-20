@@ -49,7 +49,7 @@ export function serviceApiCreate<C = unknown>(
 		requestConfig: AxiosRequestConfig = {},
 		customConfig?: C
 	): AxiosPromise<IServiceResponse<T>> {
-		var config = requestConfig;
+		let config = requestConfig;
 		if (customRequestDefaultConfig != undefined) {
 			config = { ...config, ...customRequestDefaultConfig };
 		}
@@ -118,7 +118,7 @@ export function serviceApiNormalCreate<C = unknown>(
 		requestConfig: AxiosRequestConfig = {},
 		customConfig?: C
 	): AxiosPromise<R> {
-		var config = requestConfig;
+		let config = requestConfig;
 		if (customRequestDefaultConfig != undefined) {
 			config = { ...config, ...customRequestDefaultConfig };
 		}

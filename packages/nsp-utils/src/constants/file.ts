@@ -19,7 +19,6 @@ export enum MIME {
 }
 
 export type MIME_KEYS = keyof typeof MIME;
-
 export const PREVIEW_MIME_TYPE_LIST = [
 	...acceptImageType.split(",").map((type) => type.trim().slice(1)),
 	"pdf",

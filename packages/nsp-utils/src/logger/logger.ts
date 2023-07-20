@@ -38,7 +38,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 	 * @description 日志等级：*
 	 */
 	const LogTrace = (info: ILoggerInfo) => {
-		var _info = info as ILoggerInfoWithLevel;
+		const _info = info as ILoggerInfoWithLevel;
 		_info.level = "log";
 		basic(_info);
 	};
@@ -47,7 +47,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 	 * @description 日志等级：**
 	 */
 	const LogInformation = (info: ILoggerInfo) => {
-		var _info = info as ILoggerInfoWithLevel;
+		const _info = info as ILoggerInfoWithLevel;
 		_info.level = "info";
 		basic(_info);
 	};
@@ -56,7 +56,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 	 * @description 日志等级：***
 	 */
 	const LogWarning = (info: ILoggerInfo) => {
-		var _info = info as ILoggerInfoWithLevel;
+		const _info = info as ILoggerInfoWithLevel;
 		_info.level = "warning";
 		basic(_info);
 	};
@@ -65,7 +65,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 	 * @description 日志等级：****
 	 */
 	const LogError = (info: ILoggerInfo) => {
-		var _info = info as ILoggerInfoWithLevel;
+		const _info = info as ILoggerInfoWithLevel;
 		_info.level = "error";
 		basic(_info);
 	};
@@ -74,7 +74,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 	 * @description 日志等级：*****
 	 */
 	const LogFatal = (info: ILoggerInfo) => {
-		var _info = info as ILoggerInfoWithLevel;
+		const _info = info as ILoggerInfoWithLevel;
 		_info.level = "fatal";
 		basic(_info);
 	};

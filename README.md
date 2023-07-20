@@ -19,3 +19,21 @@ pnpm up --filter "./apps/**"
 ```
 
 to upgrade all packages under `projects`
+
+### Lint all project
+
+```shell
+pnpm --filter "./apps/**" --filter "./packages/**" lint:error
+```
+
+### tsc all project
+
+```shell
+pnpm --filter "./apps/**" --filter "./packages/**" tsc
+```
+
+### Build all project
+
+```shell
+pnpm --filter "./apps/**" --filter "./packages/**" build
+```

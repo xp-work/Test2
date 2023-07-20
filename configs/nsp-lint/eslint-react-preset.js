@@ -21,6 +21,8 @@ module.exports = {
 			"error",
 			{ "ts-expect-error": "allow-with-description" },
 		],
+		"no-empty-function": "off",
+		"@typescript-eslint/no-empty-function": "off",
 	},
 	settings: {
 		react: {
