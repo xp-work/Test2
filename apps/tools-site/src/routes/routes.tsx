@@ -9,6 +9,7 @@ import NotFoundRoutes from "@project-self/routes/not-found/router";
 import FixIconRouter from "./fix-icon/router";
 import DashboardRouter from "./dashboard/router";
 import TagRoutes from "./tags/router";
+import ContributorsRouter from "./contributors/router";
 
 export type AppRouteObject = RouteObject & {
 	/**
@@ -51,6 +52,7 @@ const withPermissionPageRoutes: AppRouteObject[] = [
 	// MasterDetailRoutes,
 	FixIconRouter,
 	...TagRoutes,
+	ContributorsRouter,
 ];
 
 /**

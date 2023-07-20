@@ -23,7 +23,8 @@
   "Route": {
     "Dashboard": "仪表板",
     "TagDetail": "标签详情",
-    "Tags": "标签"
+    "Tags": "标签",
+    "Contributors": "贡献者"
   },
   "Test": "测试"
 }

@@ -23,7 +23,8 @@
   "Route": {
     "Dashboard": "Dashboard",
     "TagDetail": "标签详情",
-    "Tags": "标签"
+    "Tags": "标签",
+    "Contributors": "Contributors"
   },
   "Test": "Test"
 }
