@@ -67,7 +67,7 @@ export default function ({ mode }) {
 						redux: ["react-redux", "@reduxjs/toolkit"],
 						oidc: ["oidc-client", "redux-oidc"],
 						antd: ["antd"],
-						store: ["store2"],
+						nsputils: ["nsp-utils"],
 						lodash: ["lodash"],
 					},
 				},
