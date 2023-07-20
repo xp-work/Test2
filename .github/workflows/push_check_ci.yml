@@ -1,16 +1,7 @@
-name: Node pnpm CI
+name: PUSH CHECK CI
 
 on:
   push:
-    branches:
-      - "master" # match main branch
-      - "dev" # match developer branch
-      - "release/*" # matches release branch
-      - "feature/*" # matches feature branch
-      - "bugfix/*" # matches bugfix branch
-      - "hotfix/*" # matches hotfix branch
-      - "35-new-version" # temp match
-  pull_request:
     branches:
       - "master" # match main branch
       - "dev" # match developer branch
@@ -55,3 +46,21 @@ jobs:
           echo ${{github.workspace}}
           pnpm run tsc
           pnpm run build
+      - name: Comment success
+        if: ${{ success() }}
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            ✅ Actions success!
+      - name: Comment failure
+        if: ${{ failure() }}
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            ❌ Actions failure!
+      - name: Comment cancelled
+        if: ${{ cancelled() }}
+        uses: peter-evans/commit-comment@v2
+        with:
+          body: |
+            🚫 Actions cancelled!
