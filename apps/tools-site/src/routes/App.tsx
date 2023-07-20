@@ -30,7 +30,11 @@ const App = () => {
 			const fp = await fpPromise;
 			const result = await fp.get();
 			window._FINGERPRINT_ = result.visitorId;
-			Logger.LogInformation("App", "Init", `fingerprint: ${result.visitorId}`);
+			Logger.LogInformation({
+				controllerName: "App",
+				actionName: "Init",
+				message: `fingerprint: ${result.visitorId}`,
+			});
 			const language = defaultLanguage();
 			dispatch(setLanguage(language));
 			dispatch(setLoading(false));

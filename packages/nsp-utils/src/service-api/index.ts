@@ -1,2 +1,2 @@
-export * from "./axios-base-query";
 export * from "./types";
+export * from "./service-api-create";

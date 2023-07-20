@@ -27,6 +27,7 @@
     "dayjs": "^1.11.9",
     "lodash": "^4.17.21",
     "nsp-i18n": "workspace:^",
+    "nsp-utils": "workspace:^",
     "oidc-client": "^1.11.5",
     "prop-types": "^15.8.1",
     "react": "^18.2.0",

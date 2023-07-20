@@ -1,7 +1,6 @@
-import localStore from "store2";
 import { ProjectName } from "@project-self/assets/consts/global-consts";
+import { getLocalStore, localStorage, sessionStorage } from "nsp-utils";
 
-export const nsLocalStorage = localStore.local.namespace(ProjectName);
-export const nsSessionStorage = localStore.session.namespace(ProjectName);
-
-export { localStore };
+export const nsLocalStorage = localStorage(ProjectName);
+export const nsSessionStorage = sessionStorage(ProjectName);
+export const localStore = getLocalStore();
