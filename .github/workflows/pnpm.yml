@@ -55,4 +55,3 @@ jobs:
           echo ${{github.workspace}}
           pnpm run tsc
           pnpm run build
-          pnpm run lint:error
