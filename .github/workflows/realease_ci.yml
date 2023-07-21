@@ -1,4 +1,4 @@
-name: PULL REQUEST CHECK CI
+name: REALEASE
 
 on:
   push:

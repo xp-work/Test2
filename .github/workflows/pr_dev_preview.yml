@@ -1,4 +1,4 @@
-name: PULL REQUEST CHECK CI
+name: PULL REQUEST PREVIEW
 
 on:
   pull_request:
