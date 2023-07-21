@@ -1,24 +1,13 @@
 name: PULL REQUEST CHECK CI
 
 on:
-  pull_request:
-    branches:
-      - "master" # match main branch
-      - "dev" # match developer branch
-      - "release/**" # matches release branch
-    types:
-      - opened
-      - edited
-      - reopened
-  workflow_run:
-    workflows: ["PULL REQUEST CHECK CI"]
-    branches: ["dev", "release/**", "master"]
-    types:
-      - completed
+  push:
+    tags:
+      - "v*.*.*"
 
 permissions:
   contents: write
-  pull-requests: write
+  discussions: write
 
 jobs:
   build:
@@ -51,7 +40,7 @@ jobs:
         uses: nwtgck/actions-netlify@v2.0.0
         with:
           publish-dir: "apps/tools-site/dist"
-          production-deploy: false
+          production-deploy: true
           enable-pull-request-comment: true
           enable-commit-comment: true
           enable-commit-status: true
@@ -60,8 +49,20 @@ jobs:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
-      - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
+      - name: Compress action step
+        uses: a7ul/tar-action@v1.1.0
+        id: compress
         with:
-          message: |
-            🚀 Deploy on ${{ steps.netlify.outputs.deploy-url }}
+          command: c
+          cwd: ./
+          files: |
+            ./apps/tools-site/dist
+          outPath: tools-site.tar.gz
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{github.ref_name}}
+          tag_name: ${{github.ref_name}}
+          body_path: ./apps/tools-site/changelogs/${{github.ref_name}}.md
+          discussion_category_name: Release
+          files: tools-site.tar.gz
