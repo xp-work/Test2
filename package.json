@@ -9,6 +9,7 @@
 		"eslint": "^8.39.0",
 		"eslint-plugin-react": "^7.32.2",
 		"husky": "^8.0.3",
+		"netlify-cli": "^15.9.1",
 		"prettier": "^2.8.8"
 	}
 }

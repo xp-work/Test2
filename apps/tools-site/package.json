@@ -8,6 +8,8 @@
     "start": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
+    "netlify:prod": "pnpm run build && netlify deploy --dir=dist --prod",
+    "netlify:preview": "pnpm run build && netlify deploy --dir=dist",
     "prettier": "prettier -c --write \\\"src/**/*\\\"",
     "tsc": "tsc --noEmit --skipLibCheck --incremental",
     "lint": "eslint --ext .jsx,.js,.tsx,.ts src/**/*",
