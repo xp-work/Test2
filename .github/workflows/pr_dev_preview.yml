@@ -3,6 +3,10 @@ name: PULL REQUEST PREVIEW
 on:
   workflow_run:
     workflows: ["PULL REQUEST CHECK CI"]
+    branches:
+      - "master" # match main branch
+      - "dev" # match developer branch
+      - "release/**" # matches release branch
     types:
       - completed
 
