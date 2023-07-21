@@ -43,3 +43,9 @@ pnpm --filter "./apps/**" --filter "./packages/**" build
 ```shell
 git commit -n -m "some message"
 ```
+
+### Uninstall husky
+
+```shell
+npm uninstall husky && git config --unset core.hooksPath
+```
