@@ -40,7 +40,7 @@ jobs:
         run: |
           echo ${{github.ref}}
           pnpm install
-      - name: tools-site run cmd
+      - name: Check
         run: |
           echo ${{github.workspace}}
           pnpm --filter "./apps/**" --filter "./packages/**" lint:error

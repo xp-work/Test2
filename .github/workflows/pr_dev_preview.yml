@@ -10,6 +10,11 @@ on:
       - opened
       - edited
       - reopened
+  workflow_run:
+    workflows: ["PULL REQUEST CHECK CI"]
+    branches: ["dev", "release/**", "master"]
+    types:
+      - completed
 
 permissions:
   contents: read
@@ -41,27 +46,26 @@ jobs:
         run: |
           echo ${{github.ref}}
           pnpm install
-      - name: Check
+      - name: Build
         run: |
           echo ${{github.workspace}}
-          pnpm --filter "./apps/**" --filter "./packages/**" lint:error
-          pnpm --filter "./apps/**" --filter "./packages/**" tsc
           pnpm --filter "./apps/**" --filter "./packages/**" build
-      - name: Comment success
-        if: ${{ success() }}
+      - name: Deploy to Netlify
+        id: netlify
+        uses: nwtgck/actions-netlify@v2.0.0
+        with:
+          publish-dir: "apps/tools-site/dist"
+          production-deploy: false
+          enable-pull-request-comment: true
+          enable-commit-comment: true
+          enable-commit-status: true
+          overwrites-pull-request-comment: true
+        env:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
+        timeout-minutes: 1
+      - name: Comment PR
         uses: thollander/actions-comment-pull-request@v2
         with:
           message: |
-            ✅ ${{ matrix.os }} actions success!
-      - name: Comment failure
-        if: ${{ failure() }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            ❌ ${{ matrix.os }} actions failure!
-      - name: Comment cancelled
-        if: ${{ cancelled() }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            🚫 ${{ matrix.os }} actions cancelled!
+            🚀 Deploy on ${{ steps.netlify.outputs.deploy-url }}
