@@ -25,14 +25,10 @@ jobs:
     name: Check (${{ matrix.node_version }}, ${{ matrix.os }}) pr
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - name: Use Node.js ${{ matrix.node_version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node_version }}
-          cache: "pnpm"
         env:
           CI: true
           PROGRESS: none
@@ -48,21 +44,3 @@ jobs:
           pnpm --filter "./apps/**" --filter "./packages/**" lint:error
           pnpm --filter "./apps/**" --filter "./packages/**" tsc
           pnpm --filter "./apps/**" --filter "./packages/**" build
-      - name: Comment success
-        if: ${{ success() }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            ✅ ${{ matrix.os }} actions success!
-      - name: Comment failure
-        if: ${{ failure() }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            ❌ ${{ matrix.os }} actions failure!
-      - name: Comment cancelled
-        if: ${{ cancelled() }}
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            🚫 ${{ matrix.os }} actions cancelled!

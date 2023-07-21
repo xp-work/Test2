@@ -1,14 +1,15 @@
 name: PULL REQUEST PREVIEW
 
 on:
-  workflow_run:
-    workflows: ["PULL REQUEST CHECK CI"]
+  pull_request:
     branches:
       - "master" # match main branch
       - "dev" # match developer branch
       - "release/**" # matches release branch
     types:
-      - completed
+      - opened
+      - edited
+      - reopened
 
 permissions:
   contents: write
@@ -21,14 +22,10 @@ jobs:
     name: preview deploy pr
     steps:
       - uses: actions/checkout@v3
-      - uses: pnpm/action-setup@v2
-        with:
-          version: 8
       - name: Use Node.js 16.x
         uses: actions/setup-node@v3
         with:
           node-version: 16.x
-          cache: "pnpm"
         env:
           CI: true
           PROGRESS: none
