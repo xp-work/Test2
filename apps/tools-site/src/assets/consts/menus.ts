@@ -8,6 +8,11 @@ export interface MenuItem {
 	icon?: string;
 	path: Nullable<string>;
 	permission: Nullable<number[]>;
+	/**
+	 * 将会直接转为 a 标签链接 _blank rel:AHrefRelAllNo
+	 * 有外部地址优先使用
+	 */
+	externalUrl?: string;
 	children: Nullable<MenuItem[]>;
 }
 
@@ -119,6 +124,44 @@ export const Menus: MenuItem[] = [
 				path: "/generate/rsa-generate",
 				permission: null,
 				children: null,
+			},
+		],
+	},
+	{
+		id: 100900,
+		name: "Menu.About.Index",
+		i18n: {
+			"zh-CN": "关于",
+			"en-US": "About",
+		},
+		icon: "nsp-about",
+		path: null,
+		permission: null,
+		children: [
+			{
+				id: 100901,
+				name: "Menu.About.Contributors",
+				i18n: {
+					"zh-CN": "贡献者",
+					"en-US": "Contributors",
+				},
+				icon: "nsp-about",
+				path: "/about/contributors",
+				permission: null,
+				children: null,
+			},
+			{
+				id: 100902,
+				name: "Menu.About.Github",
+				i18n: {
+					"zh-CN": "Github",
+					"en-US": "Github",
+				},
+				icon: "nsp-GitHub",
+				path: null,
+				permission: null,
+				children: null,
+				externalUrl: "https://github.com/nextstarproject/tools-fe",
 			},
 		],
 	},

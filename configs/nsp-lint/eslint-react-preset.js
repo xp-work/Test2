@@ -23,6 +23,7 @@ module.exports = {
 		],
 		"no-empty-function": "off",
 		"@typescript-eslint/no-empty-function": "off",
+		"react/jsx-no-target-blank": [1],
 	},
 	settings: {
 		react: {

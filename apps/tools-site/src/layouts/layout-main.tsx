@@ -26,7 +26,7 @@ const LayoutMain = () => {
 	return (
 		<Layout
 			className={`h-full w-full ${globalState.theme.isDark ? "nsp-dark" : ""}`}
-			style={{ minWidth: "1280px", color: colorText }}
+			style={{ minWidth: "1280px" }}
 		>
 			<Layout.Header
 				className={"flex flex-row items-center px-4"}
@@ -43,7 +43,9 @@ const LayoutMain = () => {
 				{/* left sidebar */}
 				<LayoutLeftSidebar />
 				<Layout.Content
-					className={"h-full overflow-auto relative"}
+					className={
+						"flex flex-col h-full overflow-auto relative [&>section]:overflow-auto [&>section]:px-4 [&>section]:py-2"
+					}
 					style={{ backgroundColor: colorBgLayout }}
 				>
 					<LayoutBreadcrumb />

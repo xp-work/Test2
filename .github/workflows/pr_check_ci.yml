@@ -45,8 +45,9 @@ jobs:
         working-directory: ./apps/tools-site
         run: |
           echo ${{github.workspace}}
-          pnpm run tsc
-          pnpm run build
+          pnpm --filter "./apps/**" --filter "./packages/**" lint:error
+          pnpm --filter "./apps/**" --filter "./packages/**" tsc
+          pnpm --filter "./apps/**" --filter "./packages/**" build
       - name: Comment success
         if: ${{ success() }}
         uses: thollander/actions-comment-pull-request@v2

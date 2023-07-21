@@ -84,7 +84,7 @@ const LayoutBreadcrumb = () => {
 
 	return (
 		<Breadcrumb
-			className={"h-10 px-4 leading-10"}
+			className={"h-10 px-4 leading-10 shadow"}
 			style={{
 				backgroundColor: colorPrimaryBg,
 				color: colorText,

@@ -37,3 +37,9 @@ pnpm --filter "./apps/**" --filter "./packages/**" tsc
 ```shell
 pnpm --filter "./apps/**" --filter "./packages/**" build
 ```
+
+### Skip pre-commit
+
+```shell
+git commit -n -m "some message"
+```

@@ -1,7 +1,13 @@
 {
+	"scripts": {
+		"lint": "pnpm --filter './apps/**' --filter './packages/**' lint:error",
+		"tsc": "pnpm --filter './apps/**' --filter './packages/**' tsc",
+		"build": "pnpm --filter './apps/**' --filter './packages/**' build"
+	},
 	"devDependencies": {
 		"eslint": "^8.39.0",
 		"eslint-plugin-react": "^7.32.2",
+		"husky": "^8.0.3",
 		"prettier": "^2.8.8"
 	}
 }

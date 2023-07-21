@@ -12,6 +12,11 @@ const LayoutMainWrapper = () => {
 				algorithm: globalState.theme.isDark ? theme.darkAlgorithm : theme.defaultAlgorithm,
 				token: {
 					colorPrimary: globalState.theme.primaryColor,
+					screenXL: 1300,
+					screenXLMin: 1300,
+					screenXLMax: 1800,
+					screenXXL: 1800,
+					screenXXLMin: 1800,
 				},
 			}}
 		>

@@ -1,6 +1,6 @@
 import LayoutLeftSideBarTrigger from "@project-self/layouts/components/layout-left-sidebar-trigger";
 import { Layout, Menu, theme } from "antd";
-import { useEffect, useState } from "react";
+import { useCallback, useEffect, useState } from "react";
 import { useAppSelector } from "@project-self/store/store";
 import { selectGlobalState, selectLayoutState } from "@project-self/store/selector";
 import { MenuItem } from "@project-self/assets/consts/menus";
@@ -10,6 +10,7 @@ import { AntDesignOutlined } from "@ant-design/icons";
 import { Languages } from "nsp-i18n";
 import { defaultLanguage } from "@project-self/utils/default-language";
 import { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
+import { AHrefRelAllNo } from "@project-self/assets/consts/html-tag-consts";
 
 /**
  * @description 将请求的Menus列表转换为Antd的菜单
@@ -28,10 +29,20 @@ const convertMenus = (menus: Nullable<MenuItem[]>, i18n: Languages): ItemType[] 
 					labelName = x.i18n[language];
 				}
 			}
-
+			let label: string | JSX.Element = labelName;
+			if (x.path) {
+				label = <Link to={x.path}>{labelName}</Link>;
+			}
+			if (x.externalUrl) {
+				label = (
+					<a href={x.externalUrl} title={labelName} target={"_blank"} rel={AHrefRelAllNo}>
+						{labelName}
+					</a>
+				);
+			}
 			return {
 				key: x.id,
-				label: x.path != null ? <Link to={x.path}>{labelName}</Link> : labelName,
+				label: label,
 				icon:
 					x.icon == undefined ? <AntDesignOutlined /> : <DynamicAntIcon type={x.icon} />,
 				children:
@@ -99,6 +110,10 @@ const LayoutLeftSidebar = () => {
 		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, [layoutState.menus, location.pathname]);
 
+	const renderMenus = useCallback(() => {
+		return convertMenus(layoutState.menus, globalState.language);
+	}, [layoutState.menus, globalState.language]);
+
 	return (
 		<Layout.Sider
 			theme={globalState.theme.isDark ? "dark" : "light"}
@@ -125,7 +140,7 @@ const LayoutLeftSidebar = () => {
 						setOpenKeys(keys);
 					}}
 					style={{ height: "100%", borderRight: 0 }}
-					items={convertMenus(layoutState.menus, globalState.language)}
+					items={renderMenus()}
 				/>
 			</div>
 		</Layout.Sider>

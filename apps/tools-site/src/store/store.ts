@@ -1,4 +1,4 @@
-import { configureStore } from "@reduxjs/toolkit";
+import { combineReducers, configureStore } from "@reduxjs/toolkit";
 import globalReducer from "@project-self/rtk/global-slice";
 import logger from "redux-logger";
 import { TypedUseSelectorHook, useDispatch, useSelector } from "react-redux";
@@ -7,12 +7,14 @@ import { oidcExtendSlice } from "@project-self/rtk/oidc";
 import { extendReducer } from "@project-self/redux/extend-reducer";
 import { isDev } from "@project-self/utils/env-detect";
 import layoutReducer from "@project-self/layouts/rtk/layout-slice";
+import { PageReducers } from "@project-self/routes/rtk/rtk";
 
 export const store = configureStore({
 	reducer: {
 		oidc: extendReducer(oidcReducer, oidcExtendSlice.reducer),
 		global: globalReducer,
 		layout: layoutReducer,
+		page: PageReducers,
 	},
 	middleware: (getDefaultMiddleware) => {
 		const defaultMiddleware = getDefaultMiddleware({

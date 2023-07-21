@@ -3,7 +3,7 @@ import Contributors from "@project-self/routes/contributors/index";
 
 const ContributorsRouter: AppRouteObject = {
 	title: "Route.Contributors",
-	path: "/contributors",
+	path: "/about/contributors",
 	element: <Contributors />,
 	permission: [],
 };
