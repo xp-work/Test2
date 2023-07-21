@@ -15,10 +15,12 @@ on:
     branches: ["dev", "release/**", "master"]
     types:
       - completed
+      - requested
 
 permissions:
   contents: write
   pull-requests: write
+  actions: read
 
 jobs:
   build:
