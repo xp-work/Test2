@@ -1,18 +1,8 @@
 name: PULL REQUEST PREVIEW
 
 on:
-  pull_request:
-    branches:
-      - "master" # match main branch
-      - "dev" # match developer branch
-      - "release/**" # matches release branch
-    types:
-      - opened
-      - edited
-      - reopened
   workflow_run:
     workflows: ["PULL REQUEST CHECK CI"]
-    branches: ["dev", "release/**", "master"]
     types:
       - completed
       - requested
