@@ -23,6 +23,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: preview deploy pr
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2

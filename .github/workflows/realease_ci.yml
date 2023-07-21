@@ -12,6 +12,7 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
+    name: production deploy
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
