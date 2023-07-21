@@ -5,7 +5,6 @@ on:
     workflows: ["PULL REQUEST CHECK CI"]
     types:
       - completed
-      - requested
 
 permissions:
   contents: write
