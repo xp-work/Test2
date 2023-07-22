@@ -4,6 +4,7 @@ import { useAppDispatch, useAppSelector } from "@project-self/store/store";
 import { selectContributorsState } from "./rtk/selector";
 import { Avatar, Badge, Col, Row, Skeleton, theme } from "antd";
 import { AHrefRelAllNo } from "@project-self/assets/consts/html-tag-consts";
+import { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
 
 const Contributors = () => {
 	const contributorsState = useAppSelector(selectContributorsState);
@@ -51,6 +52,7 @@ const Contributors = () => {
 							>
 								{x.login}
 							</span>
+							<DynamicAntIcon type="nsp-share" className="text-2xl" />
 						</a>
 					</Col>
 				))}
