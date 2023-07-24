@@ -11,7 +11,7 @@ const Contributors = () => {
 	const [skeletonActive, setSkeletonActive] = useState(true);
 	const dispatch = useAppDispatch();
 	const {
-		token: { colorText, colorBorder, colorBgContainer },
+		token: { colorBgContainer, colorText },
 	} = theme.useToken();
 	useEffect(() => {
 		const init = async () => {
@@ -30,10 +30,12 @@ const Contributors = () => {
 					<Col key={x.id} span={6} xl={4}>
 						<a
 							href={x.html_url}
-							className={"flex items-center py-3 px-1 border-solid border rounded"}
+							className={
+								"flex items-center py-3 px-1 border-solid border rounded  border-gray-300 hover:border-sky-400  hover:!text-sky-500"
+							}
 							style={{
-								borderColor: colorBorder,
 								backgroundColor: colorBgContainer,
+								color: colorText,
 							}}
 							rel={AHrefRelAllNo}
 							target={"_blank"}
@@ -46,10 +48,7 @@ const Contributors = () => {
 									size={"large"}
 								/>
 							</Badge>
-							<span
-								className="flex-1 grow mx-2 text-left whitespace-nowrap overflow-hidden text-ellipsis"
-								style={{ color: colorText }}
-							>
+							<span className="flex-1 grow mx-2 text-left whitespace-nowrap overflow-hidden text-ellipsis">
 								{x.login}
 							</span>
 							<DynamicAntIcon type="nsp-share" className="text-2xl" />
@@ -58,7 +57,7 @@ const Contributors = () => {
 				))}
 			</Row>
 		);
-	}, [contributorsState.userList, colorBorder, colorBgContainer, colorText]);
+	}, [contributorsState.userList, colorBgContainer, colorText]);
 	return (
 		<section>
 			{skeletonActive && <Skeleton avatar={{ shape: "circle", size: "default" }} active />}
