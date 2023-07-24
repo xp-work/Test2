@@ -11,6 +11,7 @@ import { getRelativeBasePath } from "@project-self/utils/env-detect";
 import { initDevHelper } from "@project-self/utils/dev-helper";
 import { userManager } from "@project-self/utils/auth/user-manager";
 import { OidcProvider } from "redux-oidc";
+import * as nspUtils from "nsp-utils";
 
 if (import.meta.env.NSP_LANGUAGE == "true") {
 	initI18nConfig();
@@ -31,7 +32,7 @@ if (import.meta.env.NSP_SENTRY == "true") {
 	});
 }
 
-initDevHelper(store);
+initDevHelper(store, nspUtils);
 
 ReactDOM.createRoot(document.getElementById("root") as HTMLElement).render(
 	<Provider store={store}>
