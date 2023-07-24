@@ -16,19 +16,7 @@ export interface MenuItem {
 	children: Nullable<MenuItem[]>;
 }
 
-export const Menus: MenuItem[] = [
-	{
-		id: 100000,
-		name: "Menu.Dashboard",
-		i18n: {
-			"zh-CN": "仪表板",
-			"en-US": "Dashboard",
-		},
-		icon: "nsp-dashboard",
-		path: "/dashboard",
-		permission: null,
-		children: null,
-	},
+export const BusinessMenus: MenuItem[] = [
 	{
 		id: 100100,
 		name: "Menu.Safety.Index",
@@ -127,6 +115,22 @@ export const Menus: MenuItem[] = [
 			},
 		],
 	},
+];
+
+export const Menus: MenuItem[] = [
+	{
+		id: 100000,
+		name: "Menu.Dashboard",
+		i18n: {
+			"zh-CN": "仪表板",
+			"en-US": "Dashboard",
+		},
+		icon: "nsp-dashboard",
+		path: "/dashboard",
+		permission: null,
+		children: null,
+	},
+	...BusinessMenus,
 	{
 		id: 100900,
 		name: "Menu.About.Index",

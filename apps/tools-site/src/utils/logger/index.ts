@@ -14,7 +14,7 @@ const loggerExtend = (info: ILoggerInfoWithTime, message: string) => {
 			if (info.level == "fatal" || info.level == "error") {
 				Sentry.captureException(info);
 			} else {
-				Sentry.captureMessage(message, info.level ?? "debug");
+				Sentry.captureMessage(message, info.level ?? "info");
 			}
 		});
 	}

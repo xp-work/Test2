@@ -34,6 +34,10 @@ const App = () => {
 				controllerName: "App",
 				actionName: "Init",
 				message: `fingerprint: ${result.visitorId}`,
+				externalData: {
+					result: result,
+					userAgent: navigator.userAgent,
+				},
 			});
 			const language = defaultLanguage();
 			dispatch(setLanguage(language));
@@ -64,7 +68,7 @@ const App = () => {
 		<ConfigProvider locale={globalState.language == "zh-CN" ? zhCN : enUS}>
 			<I18nextProvider i18n={getI18n()} defaultNS={"translation"}>
 				{globalState.loading && <GlobalLoading />}
-				<RootRoutes />
+				{!globalState.loading && <RootRoutes />}
 			</I18nextProvider>
 		</ConfigProvider>
 	);

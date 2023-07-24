@@ -24,7 +24,7 @@ export const getLogger = (extend: (info: ILoggerInfoWithTime, message: string) =
 		const loggerInfo: ILoggerInfoWithTime = info as ILoggerInfoWithTime;
 		loggerInfo.date = new Date();
 
-		const temp = `Controller: ${loggerInfo.controllerName}, Action: ${loggerInfo.actionName}, Message: ${loggerInfo.message} Level: ${loggerInfo.level}, Error: ${loggerInfo.error}, Date: ${loggerInfo.date}`;
+		const temp = `Controller: ${loggerInfo.controllerName}, Action: ${loggerInfo.actionName}, Message: ${loggerInfo.message} Level: ${loggerInfo.level}, Error: ${loggerInfo.error}, Date: ${loggerInfo.date}, external: ${loggerInfo.externalData}`;
 
 		// eslint-disable-next-line no-console
 		console.log("%c" + temp, `color:${switchLevelColor(loggerInfo.level)};`);

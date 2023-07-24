@@ -6,6 +6,8 @@ export interface ILoggerInfo {
 	// eslint-disable-next-line @typescript-eslint/no-explicit-any
 	error?: any;
 	message?: string;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	externalData?: any;
 }
 
 export interface ILoggerInfoWithLevel extends ILoggerInfo {

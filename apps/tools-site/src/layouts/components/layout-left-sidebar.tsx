@@ -1,5 +1,5 @@
 import LayoutLeftSideBarTrigger from "@project-self/layouts/components/layout-left-sidebar-trigger";
-import { Layout, Menu, theme } from "antd";
+import { Layout, Menu, Skeleton, theme } from "antd";
 import { useCallback, useEffect, useState } from "react";
 import { useAppSelector } from "@project-self/store/store";
 import { selectGlobalState, selectLayoutState } from "@project-self/store/selector";
@@ -88,7 +88,7 @@ const getCurrentMenus = (pathname: string, menus: Nullable<MenuItem[]>): MenuIte
 	return tempMenus;
 };
 
-const LayoutLeftSidebar = () => {
+const LayoutLeftSidebar = (props: { prepare: boolean }) => {
 	const [collapsed, setCollapsed] = useState(false);
 	const globalState = useAppSelector(selectGlobalState);
 	const layoutState = useAppSelector(selectLayoutState);
@@ -131,17 +131,19 @@ const LayoutLeftSidebar = () => {
 			collapsed={collapsed}
 		>
 			<div className={"h-full w-full overflow-x-hidden overflow-y-auto"}>
-				<Menu
-					mode={"inline"}
-					selectedKeys={selectKeys}
-					openKeys={openKeys}
-					onOpenChange={(keys) => {
-						console.log(keys);
-						setOpenKeys(keys);
-					}}
-					style={{ height: "100%", borderRight: 0 }}
-					items={renderMenus()}
-				/>
+				{props.prepare && <Skeleton active={true} />}
+				{!props.prepare && (
+					<Menu
+						mode={"inline"}
+						selectedKeys={selectKeys}
+						openKeys={openKeys}
+						onOpenChange={(keys) => {
+							setOpenKeys(keys);
+						}}
+						style={{ height: "100%", borderRight: 0 }}
+						items={renderMenus()}
+					/>
+				)}
 			</div>
 		</Layout.Sider>
 	);
