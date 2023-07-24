@@ -58,7 +58,7 @@ const Contributors = () => {
 				))}
 			</Row>
 		);
-	}, [contributorsState.userList, colorText]);
+	}, [contributorsState.userList, colorBorder, colorBgContainer, colorText]);
 	return (
 		<section>
 			{skeletonActive && <Skeleton avatar={{ shape: "circle", size: "default" }} active />}

@@ -36,7 +36,7 @@ import { IServiceResponse } from "./types";
  * ```
  */
 export function serviceApiCreate<C = unknown>(
-	defaultConfiguration: CreateAxiosDefaults<any>,
+	defaultConfiguration: CreateAxiosDefaults<unknown>,
 	configAxiosInstance?: (axiosInstance: AxiosInstance) => void,
 	customRequestDefaultConfig?: C
 ) {
@@ -105,7 +105,7 @@ export function serviceApiCreate<C = unknown>(
  * return data is `string[]`
  */
 export function serviceApiNormalCreate<C = unknown>(
-	defaultConfiguration: CreateAxiosDefaults<any>,
+	defaultConfiguration: CreateAxiosDefaults<unknown>,
 	configAxiosInstance?: (axiosInstance: AxiosInstance) => void,
 	customRequestDefaultConfig?: C
 ) {

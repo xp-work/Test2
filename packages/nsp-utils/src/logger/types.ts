@@ -3,7 +3,8 @@ export type SeverityLevel = "fatal" | "error" | "warning" | "log" | "info" | "de
 export interface ILoggerInfo {
 	controllerName?: string;
 	actionName?: string;
-	error?: unknown;
+	// eslint-disable-next-line @typescript-eslint/no-explicit-any
+	error?: any;
 	message?: string;
 }
 

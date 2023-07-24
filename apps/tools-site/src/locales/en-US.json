@@ -2,7 +2,8 @@
   "COMMON": {
     "LANGUAGE": "中文",
     "LANGUAGE_EMOJI": "🇨🇳 中文",
-    "SITE_NAME": "NextStar Tools"
+    "SITE_NAME": "NextStar Tools",
+    "WikiPedia": "WikiPedia"
   },
   "LOADING_TEXT": "Loading...",
   "Layout": {

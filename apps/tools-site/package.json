@@ -45,8 +45,6 @@
     "@types/react-dom": "^18.2.7",
     "@types/redux-logger": "^3.0.9",
     "@types/rollup-plugin-visualizer": "^4.2.1",
-    "@typescript-eslint/eslint-plugin": "^5.62.0",
-    "@typescript-eslint/parser": "^5.62.0",
     "@vitejs/plugin-react": "^3.1.0",
     "autoprefixer": "^10.4.14",
     "nsp-lint": "workspace:^",

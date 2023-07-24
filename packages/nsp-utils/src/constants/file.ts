@@ -1,22 +1,22 @@
 export const acceptImageType = ".gif, .jfif, .jpe, .jpeg, .jpg, .png";
 
-export enum MIME {
-	pdf = "application/pdf",
-	xls = "application/vnd.ms-excel",
-	xlsx = "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
-	zip = "application/zip",
-	jpeg = "image/jpeg",
-	jpg = "image/jpeg",
-	png = "image/png",
-	tiff = "image/tiff",
-	gif = "image/gif",
-	docx = "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
-	doc = "application/msword",
-	pptx = "application/vnd.openxmlformats-officedocument.presentationml.presentation",
-	ppt = "application/vnd.ms-powerpoint",
-	octetStream = "application/octet-stream",
-	txt = "text/plain",
-}
+export const MIME: { [key: string]: string } = {
+	pdf: "application/pdf",
+	xls: "application/vnd.ms-excel",
+	xlsx: "application/vnd.openxmlformats-officedocument.spreadsheetml.sheet",
+	zip: "application/zip",
+	jpeg: "image/jpeg",
+	jpg: "image/jpeg",
+	png: "image/png",
+	tiff: "image/tiff",
+	gif: "image/gif",
+	docx: "application/vnd.openxmlformats-officedocument.wordprocessingml.document",
+	doc: "application/msword",
+	pptx: "application/vnd.openxmlformats-officedocument.presentationml.presentation",
+	ppt: "application/vnd.ms-powerpoint",
+	octetStream: "application/octet-stream",
+	txt: "text/plain",
+};
 
 export type MIME_KEYS = keyof typeof MIME;
 export const PREVIEW_MIME_TYPE_LIST = [

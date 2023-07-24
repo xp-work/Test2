@@ -2,7 +2,8 @@
   "COMMON": {
     "LANGUAGE": "English",
     "LANGUAGE_EMOJI": "🇺🇸 English",
-    "SITE_NAME": "次星工具"
+    "SITE_NAME": "次星工具",
+    "WikiPedia": "维基百科"
   },
   "LOADING_TEXT": "加载中...",
   "Layout": {

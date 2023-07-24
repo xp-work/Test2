@@ -38,7 +38,6 @@ export const contributorsSlice = createSlice({
 	},
 	extraReducers: (builder) => {
 		builder.addCase(getContributorList.fulfilled, (state, action) => {
-			console.log(action.payload);
 			state.userList = action.payload;
 		});
 	},

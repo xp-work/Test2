@@ -21,12 +21,12 @@ dayjs.extend(relativeTime);
 
 const App = () => {
 	const globalState = useAppSelector(selectGlobalState);
-	const fpPromise = FingerprintJS.load({
-		monitoring: false,
-	});
 	const dispatch = useAppDispatch();
 	useEffect(() => {
 		const init = async function () {
+			const fpPromise = FingerprintJS.load({
+				monitoring: false,
+			});
 			const fp = await fpPromise;
 			const result = await fp.get();
 			window._FINGERPRINT_ = result.visitorId;
@@ -40,6 +40,7 @@ const App = () => {
 			dispatch(setLoading(false));
 		};
 		init().then();
+		// eslint-disable-next-line react-hooks/exhaustive-deps
 	}, []);
 	useEffect(() => {
 		if (globalState.language == "zh-CN") {

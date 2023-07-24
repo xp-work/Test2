@@ -113,7 +113,6 @@ const getAppRoutes = ({ isLoggedIn }: { isLoggedIn: boolean }): RouteObject[] =>
 		routes.splice(0, 0, SignOutCallbackRoute);
 	}
 
-	console.log(routes);
 	return routes;
 };
 

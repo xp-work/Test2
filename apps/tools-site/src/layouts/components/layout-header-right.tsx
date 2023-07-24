@@ -6,8 +6,7 @@ import { setLanguage, setThemeDark } from "@project-self/rtk/global-slice";
 import { Languages, useTranslation } from "nsp-i18n";
 import { setSettingDrawer } from "../rtk/layout-slice";
 import { useCallback } from "react";
-import DynamicIcon, { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
-import { useNavigate } from "react-router-dom";
+import { DynamicAntIcon } from "@project-self/components/dynamic-icon/dynamic-icon";
 import { AHrefRelAllNo } from "@project-self/assets/consts/html-tag-consts";
 
 /**
@@ -32,7 +31,6 @@ const LayoutHeaderRight = () => {
 	const { t } = useTranslation();
 	const globalState = useAppSelector(selectGlobalState);
 	const dispatch = useAppDispatch();
-	const navigate = useNavigate();
 
 	const handleLanguageMenuClick = useCallback(
 		(e: any) => {
@@ -41,7 +39,7 @@ const LayoutHeaderRight = () => {
 				dispatch(setLanguage(selectLang));
 			}
 		},
-		[globalState.language]
+		[globalState.language, dispatch]
 	);
 	return (
 		<div className={"flex flex-row items-center flex-1 justify-end h-full"}>

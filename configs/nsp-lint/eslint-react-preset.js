@@ -21,9 +21,8 @@ module.exports = {
 			"error",
 			{ "ts-expect-error": "allow-with-description" },
 		],
-		"no-empty-function": "off",
-		"@typescript-eslint/no-empty-function": "off",
-		"react/jsx-no-target-blank": [1],
+		"@typescript-eslint/no-explicit-any": [1],
+		"react/jsx-no-target-blank": [0],
 	},
 	settings: {
 		react: {

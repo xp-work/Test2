@@ -1,4 +1,3 @@
-import React from "react";
 import { AsyncStatus } from "@project-self/types/async-status";
 import { useCallback, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
@@ -19,7 +18,13 @@ const SignInCallback = () => {
 	}, [dispatch]);
 
 	const successCallback = useCallback(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		(user: any) => {
+			Logger.LogInformation({
+				controllerName: "SignInCallback",
+				actionName: "successCallback",
+				error: user,
+			});
 			dispatch(changeLoginStatus(AsyncStatus.Fulfilled));
 			navigate("/");
 		},

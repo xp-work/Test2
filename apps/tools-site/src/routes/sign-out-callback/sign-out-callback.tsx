@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect } from "react";
+import { useCallback, useEffect } from "react";
 import { SignoutCallbackComponent } from "redux-oidc";
 import { useDispatch } from "react-redux";
 import { AsyncStatus } from "@project-self/types/async-status";

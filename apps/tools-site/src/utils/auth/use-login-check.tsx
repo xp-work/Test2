@@ -32,6 +32,7 @@ const useLoginCheck = (): boolean => {
 	}, [authState]);
 
 	const loadOidcUserCallback = useCallback(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		async (user: any) => {
 			//登录中或者登出中状态 不进行后续流程
 			if (

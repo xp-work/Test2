@@ -1,4 +1,3 @@
-import React from "react";
 import { RouteObject } from "react-router-dom";
 import SignInCallback from "@project-self/routes/sign-in-callback/sign-in-callback";
 

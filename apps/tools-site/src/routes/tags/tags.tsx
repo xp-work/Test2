@@ -1,4 +1,4 @@
-import { Outlet, matchPath, useLocation } from "react-router-dom";
+import { Outlet } from "react-router-dom";
 
 const Tags = () => {
 	return (
