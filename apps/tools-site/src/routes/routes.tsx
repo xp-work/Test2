@@ -11,6 +11,7 @@ import DashboardRouter from "./dashboard/router";
 import TagRoutes from "./tags/router";
 import ContributorsRouter from "./contributors/router";
 import OneWayEncryptionRouter from "./one-way-encryption/router";
+import HmacRouter from "./hmac/router";
 
 export type AppRouteObject = RouteObject & {
 	/**
@@ -54,6 +55,7 @@ const withPermissionPageRoutes: AppRouteObject[] = [
 	FixIconRouter,
 	...TagRoutes,
 	OneWayEncryptionRouter,
+	HmacRouter,
 	ContributorsRouter,
 ];
 

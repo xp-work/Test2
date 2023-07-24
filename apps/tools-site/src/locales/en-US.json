@@ -26,7 +26,8 @@
     "TagDetail": "标签详情",
     "Tags": "标签",
     "Contributors": "Contributors",
-    "OneWayEncryption": "One Way Encryption"
+    "OneWayEncryption": "One Way Encryption",
+    "Hmac": "HMAC"
   },
   "OneWayEncryption": {
     "InputType": "Input type",
@@ -53,6 +54,10 @@
       "Description": "HA-3 (Secure Hash Algorithm 3) is the latest member of the Secure Hash Algorithm family of standards, released by NIST on August 5, 2015.Although part of the same series of standards, SHA-3 is internally different from the MD5-like structure of SHA-1 and SHA-2.",
       "Link": "https://en.wikipedia.org/wiki/SHA-3"
     }
+  },
+  "HMAC": {
+    "Description": "In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.",
+    "Link": "https://en.wikipedia.org/wiki/HMAC"
   },
   "Test": "Test"
 }

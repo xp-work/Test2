@@ -5,6 +5,7 @@ import OneWayEncryptionItem from "./components/one-way-encryption-item";
 import OneWayEncryptionSha3 from "./components/one-way-encryption-sha3";
 import { OneWayEncryptionType } from "./types";
 import { useTranslation } from "nsp-i18n";
+import { AHrefRelAllNo } from "@project-self/assets/consts/html-tag-consts";
 
 const OneWayEncryption = () => {
 	const { t } = useTranslation();
@@ -22,7 +23,7 @@ const OneWayEncryption = () => {
 				<Typography.Link
 					href={t("OneWayEncryption.Md5.Link")}
 					target={"_blank"}
-					rel={"nofollow noopener noreferrer"}
+					rel={AHrefRelAllNo}
 				>
 					{t("COMMON.WikiPedia")}
 				</Typography.Link>
@@ -38,7 +39,7 @@ const OneWayEncryption = () => {
 				<Typography.Link
 					href={t("OneWayEncryption.Sha1.Link")}
 					target={"_blank"}
-					rel={"nofollow noopener noreferrer"}
+					rel={AHrefRelAllNo}
 				>
 					{t("COMMON.WikiPedia")}
 				</Typography.Link>
@@ -54,7 +55,7 @@ const OneWayEncryption = () => {
 				<Typography.Link
 					href={t("OneWayEncryption.Sha2.Link")}
 					target={"_blank"}
-					rel={"nofollow noopener noreferrer"}
+					rel={AHrefRelAllNo}
 				>
 					{t("COMMON.WikiPedia")}
 				</Typography.Link>
