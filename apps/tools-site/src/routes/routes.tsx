@@ -10,6 +10,7 @@ import FixIconRouter from "./fix-icon/router";
 import DashboardRouter from "./dashboard/router";
 import TagRoutes from "./tags/router";
 import ContributorsRouter from "./contributors/router";
+import OneWayEncryptionRouter from "./one-way-encryption/router";
 
 export type AppRouteObject = RouteObject & {
 	/**
@@ -52,6 +53,7 @@ const withPermissionPageRoutes: AppRouteObject[] = [
 	// MasterDetailRoutes,
 	FixIconRouter,
 	...TagRoutes,
+	OneWayEncryptionRouter,
 	ContributorsRouter,
 ];
 

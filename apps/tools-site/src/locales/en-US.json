@@ -3,9 +3,9 @@
     "LANGUAGE": "中文",
     "LANGUAGE_EMOJI": "🇨🇳 中文",
     "SITE_NAME": "NextStar Tools",
-    "WikiPedia": "WikiPedia"
+    "WikiPedia": "WikiPedia",
+    "LOADING_TEXT": "Loading..."
   },
-  "LOADING_TEXT": "Loading...",
   "Layout": {
     "Application": {
       "JumpLinkTo": "Jump link to",
@@ -25,7 +25,34 @@
     "Dashboard": "Dashboard",
     "TagDetail": "标签详情",
     "Tags": "标签",
-    "Contributors": "Contributors"
+    "Contributors": "Contributors",
+    "OneWayEncryption": "One way Encryption"
+  },
+  "OneWayEncryption": {
+    "InputType": "Input type",
+    "Output": "Output",
+    "AutoUpdate": "Auto Update",
+    "OutputLength": "Output length",
+    "OutputType": "Output type",
+    "OriginText": "Origin Text",
+    "CipherText": "Cipher Text",
+    "FormatError": "Format error",
+    "Md5": {
+      "Description": "The MD5 message-digest algorithm is a widely used hash function producing a 128-bit hash value. MD5 was designed by Ronald Rivest in 1991 to replace an earlier hash function MD4, and was specified in 1992 as RFC 1321.",
+      "Link": "https://en.wikipedia.org/wiki/MD5"
+    },
+    "Sha1": {
+      "Description": "In cryptography, SHA-1 (Secure Hash Algorithm 1) is a hash function which takes an input and produces a 160-bit (20-byte) hash value known as a message digest – typically rendered as 40 hexadecimal digits. It was designed by the United States National Security Agency, and is a U.S. Federal Information Processing Standard.The algorithm has been cryptographically broken but is still widely used.",
+      "Link": "https://en.wikipedia.org/wiki/SHA-1"
+    },
+    "Sha2": {
+      "Description": "SHA-2 (Secure Hash Algorithm 2) is a set of cryptographic hash functions designed by the United States National Security Agency (NSA) and first published in 2001. They are built using the Merkle–Damgård construction, from a one-way compression function itself built using the Davies–Meyer structure from a specialized block cipher. The SHA-2 family consists of six hash functions with digests (hash values) that are 224, 256, 384 or 512 bits",
+      "Link": "https://en.wikipedia.org/wiki/SHA-2"
+    },
+    "Sha3": {
+      "Description": "HA-3 (Secure Hash Algorithm 3) is the latest member of the Secure Hash Algorithm family of standards, released by NIST on August 5, 2015.Although part of the same series of standards, SHA-3 is internally different from the MD5-like structure of SHA-1 and SHA-2.",
+      "Link": "https://en.wikipedia.org/wiki/SHA-3"
+    }
   },
   "Test": "Test"
 }

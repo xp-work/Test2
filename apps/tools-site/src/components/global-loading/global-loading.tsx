@@ -22,7 +22,7 @@ const GlobalLoading = (props: IGlobalLoadingProps) => {
 				<span className={styles.text} style={{ color: colorPrimary }}>
 					{props.message ??
 						(import.meta.env.NSP_LANGUAGE == "true"
-							? t("LOADING_TEXT")
+							? t("COMMON.LOADING_TEXT")
 							: "正在加载中...")}
 				</span>
 			</div>

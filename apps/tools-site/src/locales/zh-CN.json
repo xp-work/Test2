@@ -3,9 +3,9 @@
     "LANGUAGE": "English",
     "LANGUAGE_EMOJI": "🇺🇸 English",
     "SITE_NAME": "次星工具",
-    "WikiPedia": "维基百科"
+    "WikiPedia": "维基百科",
+    "LOADING_TEXT": "加载中..."
   },
-  "LOADING_TEXT": "加载中...",
   "Layout": {
     "Application": {
       "JumpLinkTo": "跳转链接到",
@@ -25,7 +25,34 @@
     "Dashboard": "仪表板",
     "TagDetail": "标签详情",
     "Tags": "标签",
-    "Contributors": "贡献者"
+    "Contributors": "贡献者",
+    "OneWayEncryption": "单向加密"
+  },
+  "OneWayEncryption": {
+    "InputType": "输入类型",
+    "Output": "输出",
+    "AutoUpdate": "自动更新",
+    "OutputLength": "输出长度",
+    "OutputType": "输出类型",
+    "OriginText": "原文",
+    "CipherText": "密文",
+    "FormatError": "格式错误",
+    "Md5": {
+      "Description": "MD5消息摘要算法（英语：MD5 Message-Digest Algorithm），一种被广泛使用的密码散列函数，可以产生出一个128位（16个字符(BYTES)）的散列值（hash value），用于确保信息传输完整一致。MD5由美国密码学家罗纳德·李维斯特（Ronald Linn Rivest）设计，于1992年公开，用以取代MD4算法。这套算法的程序在 RFC 1321 中被加以规范。",
+      "Link": "https://zh.wikipedia.org/wiki/MD5"
+    },
+    "Sha1": {
+      "Description": "SHA-1（英语：Secure Hash Algorithm 1，中文名：安全散列算法1）是一种密码散列函数，美国国家安全局设计，并由美国国家标准技术研究所（NIST）发布为联邦资料处理标准（FIPS）。SHA-1可以生成一个被称为消息摘要的160位（20字节）散列值，散列值通常的呈现形式为40个十六进制数。",
+      "Link": "https://zh.wikipedia.org/wiki/SHA-1"
+    },
+    "Sha2": {
+      "Description": "SHA-2，名称来自于安全散列算法2（英语：Secure Hash Algorithm 2）的缩写，一种密码散列函数算法标准，由美国国家安全局研发[3]，由美国国家标准与技术研究院（NIST）在2001年发布。属于SHA算法之一，是SHA-1的后继者。其下又可再分为六个不同的算法标准，包括了：224, 256, 384 和 512 长度",
+      "Link": "https://zh.wikipedia.org/wiki/SHA-2"
+    },
+    "Sha3": {
+      "Description": "SHA-3第三代安全散列算法(Secure Hash Algorithm 3)，之前名为Keccak（念作/ˈkɛtʃæk/或/kɛtʃɑːk/)）算法，设计者宣称在 Intel Core 2 的CPU上面，此算法的性能是12.6比特每时钟周期（cycles per byte）。",
+      "Link": "https://zh.wikipedia.org/wiki/SHA-3"
+    }
   },
   "Test": "测试"
 }

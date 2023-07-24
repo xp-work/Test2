@@ -26,6 +26,7 @@
     "antd": "^5.7.0",
     "axios": "^1.4.0",
     "classnames": "^2.3.2",
+    "crypto-js": "^4.1.1",
     "dayjs": "^1.11.9",
     "lodash": "^4.17.21",
     "nsp-i18n": "workspace:^",
@@ -39,6 +40,7 @@
     "redux-oidc": "4.0.0-beta1"
   },
   "devDependencies": {
+    "@types/crypto-js": "^4.1.1",
     "@types/lodash": "^4.14.195",
     "@types/node": "^18.16.19",
     "@types/react": "^18.2.15",
