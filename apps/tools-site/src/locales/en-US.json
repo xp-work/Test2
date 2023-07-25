@@ -19,7 +19,8 @@
     "ThemeSettingDrawerSelectLanguage": "Language Selection",
     "ThemeSettingDrawerSelectTheme": "Theme Selection",
     "ThemeSettingDrawerText1": "This is only shown in the development environment, quick operation, in the official environment will be possible to move to personal settings or other places, please user self-determination!",
-    "ThemeSettingDrawerText2": "If you want to fix the style, please change the default global state."
+    "ThemeSettingDrawerText2": "If you want to fix the style, please change the default global state.",
+    "VersionInfo": "Version Info"
   },
   "Route": {
     "Dashboard": "Dashboard",

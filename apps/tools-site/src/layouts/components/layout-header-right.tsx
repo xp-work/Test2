@@ -1,4 +1,4 @@
-import { Button, Dropdown, MenuProps, Space, Tooltip } from "antd";
+import { Button, Dropdown, MenuProps, Modal, Space, Tooltip } from "antd";
 import { GithubOutlined, GlobalOutlined, TranslationOutlined } from "@ant-design/icons";
 import { useAppDispatch, useAppSelector } from "@project-self/store/store";
 import { selectGlobalState } from "@project-self/store/selector";
@@ -33,6 +33,7 @@ const LayoutHeaderRight = () => {
 	const dispatch = useAppDispatch();
 
 	const handleLanguageMenuClick = useCallback(
+		// eslint-disable-next-line @typescript-eslint/no-explicit-any
 		(e: any) => {
 			const selectLang = e.key as Languages;
 			if (globalState.language != selectLang) {
@@ -41,6 +42,20 @@ const LayoutHeaderRight = () => {
 		},
 		[globalState.language, dispatch]
 	);
+
+	const handleClickVersion = useCallback(() => {
+		Modal.info({
+			title: t("Layout.VersionInfo"),
+			content: (
+				<div>
+					<p>
+						v{_MAIN_VERSION_} {_BUILD_VERSION_}
+					</p>
+				</div>
+			),
+		});
+	}, [t]);
+
 	return (
 		<div className={"flex flex-row items-center flex-1 justify-end h-full"}>
 			<Space>
@@ -85,6 +100,7 @@ const LayoutHeaderRight = () => {
 					target={"_blank"}
 					rel={AHrefRelAllNo}
 				/>
+				<Button icon={<DynamicAntIcon type="nsp-about" />} onClick={handleClickVersion} />
 			</Space>
 		</div>
 	);

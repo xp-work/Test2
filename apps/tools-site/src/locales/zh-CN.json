@@ -19,7 +19,8 @@
     "ThemeSettingDrawerSelectLanguage": "语言选择",
     "ThemeSettingDrawerSelectTheme": "主题选择",
     "ThemeSettingDrawerText1": "此处只在开发环境下显示，快捷操作，在正式环境将可能移动到个人设置或者其他地方，请使用者自我决定",
-    "ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可"
+    "ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可",
+    "VersionInfo": "版本信息"
   },
   "Route": {
     "Dashboard": "仪表板",
