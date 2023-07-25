@@ -2,7 +2,7 @@ name: REALEASE
 
 on:
   push:
-    tags:
+    branches:
       - "v*.*.*"
 
 permissions:
