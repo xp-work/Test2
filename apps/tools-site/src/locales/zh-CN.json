@@ -4,7 +4,15 @@
     "LANGUAGE_EMOJI": "🇺🇸 English",
     "SITE_NAME": "次星工具",
     "WikiPedia": "维基百科",
-    "LOADING_TEXT": "加载中..."
+    "LOADING_TEXT": "加载中...",
+    "Cancel": "取消",
+    "Ok": "确定"
+  },
+  "Site": {
+    "CookieTitle": "本网站使用 cookie",
+    "CookieDescription": "我们使用 cookie 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息，这些合作伙伴可能会将这些信息与您提供给他们的其他信息或他们从您使用其服务中收集的信息结合起来。",
+    "CookieNextTime": "下次再说",
+    "CookieAccept": "接受"
   },
   "Layout": {
     "Application": {

@@ -60,29 +60,31 @@ const LayoutHeaderRight = () => {
 		<div className={"flex flex-row items-center flex-1 justify-end h-full"}>
 			<Space>
 				{import.meta.env.NSP_THEME_CONFIG == "true" && (
-					<Tooltip placement="bottom" title={t("Layout.ThemeGlobalSetting")}>
-						<Button
-							icon={<GlobalOutlined />}
-							onClick={() => dispatch(setSettingDrawer(true))}
-						/>
-					</Tooltip>
+					<>
+						<Tooltip placement="bottom" title={t("Layout.ThemeGlobalSetting")}>
+							<Button
+								icon={<GlobalOutlined />}
+								onClick={() => dispatch(setSettingDrawer(true))}
+							/>
+						</Tooltip>
+						{globalState.theme.isDark ? (
+							<Tooltip placement="bottom" title={t("Layout.DayTheme")}>
+								<Button
+									icon={<DynamicAntIcon type="nsp-icons-sun" />}
+									onClick={() => dispatch(setThemeDark(false))}
+								/>
+							</Tooltip>
+						) : (
+							<Tooltip placement="bottom" title={t("Layout.NightTheme")}>
+								<Button
+									icon={<DynamicAntIcon type="nsp-Moon" />}
+									onClick={() => dispatch(setThemeDark(true))}
+								/>
+							</Tooltip>
+						)}
+					</>
 				)}
-				{import.meta.env.NSP_THEME_CONFIG == "true" &&
-					(globalState.theme.isDark ? (
-						<Tooltip placement="bottom" title={t("Layout.DayTheme")}>
-							<Button
-								icon={<DynamicAntIcon type="nsp-icons-sun" />}
-								onClick={() => dispatch(setThemeDark(false))}
-							/>
-						</Tooltip>
-					) : (
-						<Tooltip placement="bottom" title={t("Layout.NightTheme")}>
-							<Button
-								icon={<DynamicAntIcon type="nsp-Moon" />}
-								onClick={() => dispatch(setThemeDark(true))}
-							/>
-						</Tooltip>
-					))}
+
 				{import.meta.env.NSP_LANGUAGE == "true" && (
 					<Dropdown
 						menu={{

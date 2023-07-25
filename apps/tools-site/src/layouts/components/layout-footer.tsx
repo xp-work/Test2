@@ -15,6 +15,7 @@ const LayoutFooter = () => {
 				<a
 					href="https://github.com/nextstarproject"
 					rel={AHrefRelAllNo}
+					target={"_blank"}
 					title="@NextStarProject"
 				>
 					@NextStarProject
