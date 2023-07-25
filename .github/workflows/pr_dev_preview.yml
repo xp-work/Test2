@@ -39,22 +39,3 @@ jobs:
         run: |
           echo ${{github.workspace}}
           pnpm build
-      - name: Deploy to Netlify
-        id: netlify
-        uses: nwtgck/actions-netlify@v2.0.0
-        with:
-          publish-dir: "apps/tools-site/dist"
-          production-deploy: false
-          enable-pull-request-comment: true
-          enable-commit-comment: true
-          enable-commit-status: true
-          overwrites-pull-request-comment: true
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
-        timeout-minutes: 1
-      - name: Comment PR
-        uses: thollander/actions-comment-pull-request@v2
-        with:
-          message: |
-            🚀 Deploy on ${{ steps.netlify.outputs.deploy-url }}
