@@ -1,14 +1,16 @@
 import { Button, Result } from "antd";
+import { useTranslation } from "nsp-i18n";
 import { useNavigate } from "react-router-dom";
 
-const NotFound = (): JSX.Element => {
+const NotFound = () => {
 	const navigate = useNavigate();
+	const { t } = useTranslation();
 	return (
-		<div className="flex items-center justify-center pt-20">
+		<section className="flex items-center justify-center pt-20">
 			<Result
 				status="404"
 				title="404"
-				subTitle="对不起，您访问的页面不存在。"
+				subTitle={t("COMMON.NotFound")}
 				extra={
 					<Button
 						type="primary"
@@ -16,11 +18,11 @@ const NotFound = (): JSX.Element => {
 							navigate("/");
 						}}
 					>
-						返回首页
+						{t("COMMON.BackHome")}
 					</Button>
 				}
 			/>
-		</div>
+		</section>
 	);
 };
 
