@@ -27,6 +27,8 @@
     "Tags": "标签",
     "Contributors": "贡献者",
     "OneWayEncryption": "单向加密",
+    "RsaUse": "RSA 使用",
+    "RsaGenerate": "RSA 生成",
     "Hmac": "HMAC"
   },
   "OneWayEncryption": {
@@ -58,6 +60,24 @@
   "HMAC": {
     "Description": "HMAC (有时扩展为 英语：keyed-hash message authentication code, 密钥散列消息认证码, 或 英语：hash-based message authentication code，散列消息认证码），是一种通过特别计算方式之后产生的消息认证码（MAC），使用密码散列函数，同时结合一个加密密钥。它可以用来保证资料的完整性，同时可以用来作某个消息的身份验证。",
     "Link": "https://zh.wikipedia.org/wiki/HMAC"
+  },
+  "RSA": {
+    "GenerateIng": "生成中...",
+    "GenerateTips": "此处只用来生成RSA非对称加密密钥，具体的加密和解密请前往",
+    "GenerateHere": "此处",
+    "GenerateSlideSelect": "请滑动选择位数",
+    "GenerateDigits": "位数",
+    "GenerateToolTips": "位数过大时生成时间较长，并且可能卡住游览器",
+    "GenerateTwoKeys": "生成公私钥",
+    "GeneratePublicKey": "公钥",
+    "GeneratePrivateKey": "私钥",
+    "UsePlainText": "明文",
+    "UseEncrypt": "加密",
+    "UseDecrypt": "解密",
+    "UseCipherText": "密文",
+    "GenerateError": "RSA 生成错误",
+    "UseEncryptError": "RSA 加密错误",
+    "UseDecryptError": "RSA 解密错误"
   },
   "Test": "测试"
 }

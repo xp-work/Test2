@@ -28,6 +28,7 @@
     "classnames": "^2.3.2",
     "crypto-js": "^4.1.1",
     "dayjs": "^1.11.9",
+    "jsencrypt": "^3.3.2",
     "lodash": "^4.17.21",
     "nsp-i18n": "workspace:^",
     "nsp-utils": "workspace:^",

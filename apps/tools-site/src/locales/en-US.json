@@ -27,6 +27,8 @@
     "Tags": "标签",
     "Contributors": "Contributors",
     "OneWayEncryption": "One Way Encryption",
+    "RsaUse": "RSA Use",
+    "RsaGenerate": "RSA Generate",
     "Hmac": "HMAC"
   },
   "OneWayEncryption": {
@@ -58,6 +60,24 @@
   "HMAC": {
     "Description": "In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.",
     "Link": "https://en.wikipedia.org/wiki/HMAC"
+  },
+  "RSA": {
+    "GenerateIng": "generate...",
+    "GenerateTips": "This is only used to generate RSA asymmetric encryption keys, for specific encryption and decryption go to the",
+    "GenerateHere": "Here",
+    "GenerateSlideSelect": "Please slide to select the number of digits",
+    "GenerateDigits": "Digits",
+    "GenerateToolTips": "Generation time is long when the number of bits is too large and may jam the viewer",
+    "GenerateTwoKeys": "Generate public and private keys",
+    "GeneratePublicKey": "Public Key",
+    "GeneratePrivateKey": "Private Key",
+    "UsePlainText": "Plain Text",
+    "UseEncrypt": "Encrypt",
+    "UseDecrypt": "Decrypt",
+    "UseCipherText": "Cipher Text",
+    "GenerateError": "RSA generate error",
+    "UseEncryptError": "RSA encrypt error",
+    "UseDecryptError": "RSA decrypt error"
   },
   "Test": "Test"
 }

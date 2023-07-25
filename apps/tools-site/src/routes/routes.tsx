@@ -12,6 +12,7 @@ import TagRoutes from "./tags/router";
 import ContributorsRouter from "./contributors/router";
 import OneWayEncryptionRouter from "./one-way-encryption/router";
 import HmacRouter from "./hmac/router";
+import RsaRouter from "./rsa/router";
 
 export type AppRouteObject = RouteObject & {
 	/**
@@ -56,6 +57,7 @@ const withPermissionPageRoutes: AppRouteObject[] = [
 	...TagRoutes,
 	OneWayEncryptionRouter,
 	HmacRouter,
+	...RsaRouter,
 	ContributorsRouter,
 ];
 
