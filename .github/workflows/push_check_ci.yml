@@ -44,6 +44,6 @@ jobs:
       - name: Check
         run: |
           echo ${{github.workspace}}
-          pnpm --filter "./apps/**" --filter "./packages/**" lint:error
-          pnpm --filter "./apps/**" --filter "./packages/**" tsc
-          pnpm --filter "./apps/**" --filter "./packages/**" build
+          pnpm lint:error
+          pnpm tsc
+          pnpm build

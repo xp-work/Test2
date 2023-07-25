@@ -1,7 +1,8 @@
 {
 	"scripts": {
 		"prepare": "pnpm husky install",
-		"lint": "pnpm --filter './apps/**' --filter './packages/**' lint:error",
+		"lint": "pnpm --filter './apps/**' --filter './packages/**' lint",
+		"lint:error": "pnpm --filter './apps/**' --filter './packages/**' lint:error",
 		"tsc": "pnpm --filter './apps/**' --filter './packages/**' tsc",
 		"build": "pnpm --filter './apps/**' --filter './packages/**' build"
 	},

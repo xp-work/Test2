@@ -31,7 +31,7 @@ jobs:
       - name: Build
         run: |
           echo ${{github.workspace}}
-          pnpm --filter "./apps/**" --filter "./packages/**" build
+          pnpm build
       - name: Deploy to Netlify
         id: netlify
         uses: nwtgck/actions-netlify@v2.0.0
