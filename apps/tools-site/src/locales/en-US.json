@@ -77,7 +77,8 @@
     "FormatComposition": "Format Composition",
     "GenerateAction": "Generate",
     "GenerateLength": "Generate Length",
-    "GenerateNumber": "Generate Number"
+    "GenerateNumber": "Generate Number",
+    "UseRandom": "Use Math Random"
   },
   "Route": {
     "Contributors": "Contributors",

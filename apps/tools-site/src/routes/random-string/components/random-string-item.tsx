@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { RandomStringType } from "../types";
-import CryptoRandomString from "../utils";
-import { Alert, Button, Input, InputNumber, List, Space, Typography } from "antd";
+import { CryptoRandomString, RandomString } from "../utils";
+import { Alert, Button, Checkbox, Input, InputNumber, List, Space, Typography } from "antd";
 import { isNumber } from "lodash";
 import { useTranslation } from "nsp-i18n";
+import { CheckboxChangeEvent } from "antd/es/checkbox";
 
 export type RandomStringItemProps = {
 	randomStringType: RandomStringType;
@@ -15,20 +16,31 @@ const RandomStringItem = (props: RandomStringItemProps) => {
 	const [len, setLen] = useState(32);
 	const [count, setCount] = useState(10);
 	const [strList, setStrList] = useState<string[]>([]);
+	const [useRandom, setUseRandom] = useState(false);
 	const [characters, setCharacters] = useState<string>([...props.characters].join(""));
 
 	const generateCore = (): string[] => {
 		const arr: string[] = [];
 		for (let i = 0; i < count; i++) {
 			arr.push(
-				CryptoRandomString({
-					length: len,
-					type: props.randomStringType,
-					characters: characters,
-				})
+				useRandom
+					? RandomString({
+							length: len,
+							type: props.randomStringType,
+							characters: characters,
+					  })
+					: CryptoRandomString({
+							length: len,
+							type: props.randomStringType,
+							characters: characters,
+					  })
 			);
 		}
 		return arr;
+	};
+
+	const handleUseRandom = (e: CheckboxChangeEvent) => {
+		setUseRandom(e.target.checked);
 	};
 
 	const handleGenerate = () => {
@@ -70,6 +82,9 @@ const RandomStringItem = (props: RandomStringItemProps) => {
 					defaultValue={len}
 					onChange={(v) => (isNumber(v) ? setLen(v) : setLen(len))}
 				/>
+				<Checkbox onChange={handleUseRandom} checked={useRandom}>
+					{t("RandomString.UseRandom")}
+				</Checkbox>
 				<Button type="primary" onClick={handleGenerate}>
 					{t("RandomString.GenerateAction")}
 				</Button>

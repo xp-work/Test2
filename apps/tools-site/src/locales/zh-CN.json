@@ -77,7 +77,8 @@
     "FormatComposition": "格式组成",
     "GenerateAction": "生成",
     "GenerateLength": "生成长度",
-    "GenerateNumber": "生成数量"
+    "GenerateNumber": "生成数量",
+    "UseRandom": "使用随机数"
   },
   "Route": {
     "Contributors": "贡献者",
