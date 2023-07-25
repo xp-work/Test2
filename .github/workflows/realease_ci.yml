@@ -1,6 +1,13 @@
 name: REALEASE
 
+<<<<<<< HEAD
 on: workflow_dispatch
+=======
+on:
+  push:
+    branches:
+      - "v*.*.*"
+>>>>>>> 3f09fdfcc855fd96d78289479212812b172bee02
 
 permissions:
   contents: write
