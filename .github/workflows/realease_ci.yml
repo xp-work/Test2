@@ -1,9 +1,6 @@
 name: REALEASE
 
-on:
-  push:
-    tags:
-      - "v*.*.*"
+on: workflow_dispatch
 
 permissions:
   contents: write
@@ -44,12 +41,15 @@ jobs:
           files: |
             ./apps/tools-site/dist
           outPath: tools-site.tar.gz
+      - name: get-npm-version
+        id: package-version
+        uses: martinbeentjes/npm-get-version-action@v1.3.1
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
           token: ${{secrets.CUSTOM_TOKEN}}
-          name: ${{github.ref_name}}
-          tag_name: ${{github.ref_name}}
-          body_path: ./apps/tools-site/changelogs/${{github.ref_name}}.md
+          name: v${{ steps.package-version.outputs.current-version}}
+          tag_name: v${{ steps.package-version.outputs.current-version}}
+          body_path: ./apps/tools-site/changelogs/v${{ steps.package-version.outputs.current-version}}.md
           discussion_category_name: Release
           files: tools-site.tar.gz
