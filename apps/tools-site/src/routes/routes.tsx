@@ -13,6 +13,7 @@ import ContributorsRouter from "./contributors/router";
 import OneWayEncryptionRouter from "./one-way-encryption/router";
 import HmacRouter from "./hmac/router";
 import RsaRouter from "./rsa/router";
+import RandomStringRouter from "./random-string/router";
 
 export type AppRouteObject = RouteObject & {
 	/**
@@ -58,6 +59,7 @@ const withPermissionPageRoutes: AppRouteObject[] = [
 	OneWayEncryptionRouter,
 	HmacRouter,
 	...RsaRouter,
+	RandomStringRouter,
 	ContributorsRouter,
 ];
 

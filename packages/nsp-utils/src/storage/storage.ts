@@ -1,12 +1,7 @@
 import localStore from "store2";
 
 export const localStorage = (namespace: string) => {
-	const ns = localStore.local.namespace(namespace);
-	ns.prototype.getItemType = function <T>(key: string): T {
-		const result = ns.get(key);
-		return result as T;
-	};
-	return ns;
+	return localStore.local.namespace(namespace);
 };
 
 export const sessionStorage = (namespace: string) => {

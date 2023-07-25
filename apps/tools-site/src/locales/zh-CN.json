@@ -1,18 +1,16 @@
 {
   "COMMON": {
+    "Cancel": "取消",
     "LANGUAGE": "English",
     "LANGUAGE_EMOJI": "🇺🇸 English",
-    "SITE_NAME": "次星工具",
-    "WikiPedia": "维基百科",
     "LOADING_TEXT": "加载中...",
-    "Cancel": "取消",
-    "Ok": "确定"
+    "Ok": "确定",
+    "SITE_NAME": "次星工具",
+    "WikiPedia": "维基百科"
   },
-  "Site": {
-    "CookieTitle": "本网站使用 cookie",
-    "CookieDescription": "我们使用 cookie 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息，这些合作伙伴可能会将这些信息与您提供给他们的其他信息或他们从您使用其服务中收集的信息结合起来。",
-    "CookieNextTime": "下次再说",
-    "CookieAccept": "接受"
+  "HMAC": {
+    "Description": "HMAC (有时扩展为 英语：keyed-hash message authentication code, 密钥散列消息认证码, 或 英语：hash-based message authentication code，散列消息认证码），是一种通过特别计算方式之后产生的消息认证码（MAC），使用密码散列函数，同时结合一个加密密钥。它可以用来保证资料的完整性，同时可以用来作某个消息的身份验证。",
+    "Link": "https://zh.wikipedia.org/wiki/HMAC"
   },
   "Layout": {
     "Application": {
@@ -30,29 +28,19 @@
     "ThemeSettingDrawerText2": "如果需要固定样式，请将默认 global state 进行修改即可",
     "VersionInfo": "版本信息"
   },
-  "Route": {
-    "Dashboard": "仪表板",
-    "TagDetail": "标签详情",
-    "Tags": "标签",
-    "Contributors": "贡献者",
-    "OneWayEncryption": "单向加密",
-    "RsaUse": "RSA 使用",
-    "RsaGenerate": "RSA 生成",
-    "Hmac": "HMAC"
-  },
   "OneWayEncryption": {
-    "InputType": "输入类型",
-    "Output": "输出",
     "AutoUpdate": "自动更新",
-    "OutputLength": "输出长度",
-    "OutputType": "输出类型",
-    "OriginText": "原文",
     "CipherText": "密文",
     "FormatError": "格式错误",
+    "InputType": "输入类型",
     "Md5": {
       "Description": "MD5消息摘要算法（英语：MD5 Message-Digest Algorithm），一种被广泛使用的密码散列函数，可以产生出一个128位（16个字符(BYTES)）的散列值（hash value），用于确保信息传输完整一致。MD5由美国密码学家罗纳德·李维斯特（Ronald Linn Rivest）设计，于1992年公开，用以取代MD4算法。这套算法的程序在 RFC 1321 中被加以规范。",
       "Link": "https://zh.wikipedia.org/wiki/MD5"
     },
+    "OriginText": "原文",
+    "Output": "输出",
+    "OutputLength": "输出长度",
+    "OutputType": "输出类型",
     "Sha1": {
       "Description": "SHA-1（英语：Secure Hash Algorithm 1，中文名：安全散列算法1）是一种密码散列函数，美国国家安全局设计，并由美国国家标准技术研究所（NIST）发布为联邦资料处理标准（FIPS）。SHA-1可以生成一个被称为消息摘要的160位（20字节）散列值，散列值通常的呈现形式为40个十六进制数。",
       "Link": "https://zh.wikipedia.org/wiki/SHA-1"
@@ -66,27 +54,46 @@
       "Link": "https://zh.wikipedia.org/wiki/SHA-3"
     }
   },
-  "HMAC": {
-    "Description": "HMAC (有时扩展为 英语：keyed-hash message authentication code, 密钥散列消息认证码, 或 英语：hash-based message authentication code，散列消息认证码），是一种通过特别计算方式之后产生的消息认证码（MAC），使用密码散列函数，同时结合一个加密密钥。它可以用来保证资料的完整性，同时可以用来作某个消息的身份验证。",
-    "Link": "https://zh.wikipedia.org/wiki/HMAC"
-  },
   "RSA": {
-    "GenerateIng": "生成中...",
-    "GenerateTips": "此处只用来生成RSA非对称加密密钥，具体的加密和解密请前往",
-    "GenerateHere": "此处",
-    "GenerateSlideSelect": "请滑动选择位数",
     "GenerateDigits": "位数",
+    "GenerateError": "RSA 生成错误",
+    "GenerateHere": "此处",
+    "GenerateIng": "生成中...",
+    "GeneratePrivateKey": "私钥",
+    "GeneratePublicKey": "公钥",
+    "GenerateSlideSelect": "请滑动选择位数",
+    "GenerateTips": "此处只用来生成RSA非对称加密密钥，具体的加密和解密请前往",
     "GenerateToolTips": "位数过大时生成时间较长，并且可能卡住游览器",
     "GenerateTwoKeys": "生成公私钥",
-    "GeneratePublicKey": "公钥",
-    "GeneratePrivateKey": "私钥",
-    "UsePlainText": "明文",
-    "UseEncrypt": "加密",
-    "UseDecrypt": "解密",
     "UseCipherText": "密文",
-    "GenerateError": "RSA 生成错误",
+    "UseDecrypt": "解密",
+    "UseDecryptError": "RSA 解密错误",
+    "UseEncrypt": "加密",
     "UseEncryptError": "RSA 加密错误",
-    "UseDecryptError": "RSA 解密错误"
+    "UsePlainText": "明文"
   },
-  "Test": "测试"
+  "RandomString": {
+    "Chars": "字符",
+    "FormatComposition": "格式组成",
+    "GenerateAction": "生成",
+    "GenerateLength": "生成长度",
+    "GenerateNumber": "生成数量"
+  },
+  "Route": {
+    "Contributors": "贡献者",
+    "Dashboard": "仪表板",
+    "Hmac": "HMAC",
+    "OneWayEncryption": "单向加密",
+    "RandomString": "随机字符串",
+    "RsaGenerate": "RSA 生成",
+    "RsaUse": "RSA 使用",
+    "TagDetail": "标签详情",
+    "Tags": "标签"
+  },
+  "Site": {
+    "CookieAccept": "接受",
+    "CookieDescription": "我们使用 cookie 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息，这些合作伙伴可能会将这些信息与您提供给他们的其他信息或他们从您使用其服务中收集的信息结合起来。",
+    "CookieNextTime": "下次再说",
+    "CookieTitle": "本网站使用 cookie"
+  }
 }
