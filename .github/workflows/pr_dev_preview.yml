@@ -1,0 +1,41 @@
+name: PULL REQUEST PREVIEW
+
+on:
+  pull_request:
+    branches:
+      - "master" # match main branch
+      - "dev" # match developer branch
+      - "release/**" # matches release branch
+    types:
+      - opened
+      - edited
+      - reopened
+
+permissions:
+  contents: write
+  pull-requests: write
+  actions: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: preview deploy pr
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+        env:
+          CI: true
+          PROGRESS: none
+          NODE_ENV: test
+          NODE_OPTIONS: --max_old_space_size=4096
+      - name: pnpm install
+        run: |
+          echo ${{github.ref}}
+          pnpm install
+      - name: Build
+        run: |
+          echo ${{github.workspace}}
+          pnpm build

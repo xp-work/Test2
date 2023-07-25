@@ -1,0 +1,51 @@
+name: REALEASE
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+  discussions: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    name: production deploy
+    steps:
+      - uses: actions/checkout@v3
+      - name: Use Node.js 16.x
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
+        env:
+          CI: true
+          PROGRESS: none
+          NODE_ENV: test
+          NODE_OPTIONS: --max_old_space_size=4096
+      - name: pnpm install
+        run: |
+          echo ${{github.ref}}
+          pnpm install
+      - name: Build
+        run: |
+          echo ${{github.workspace}}
+          pnpm build
+      - name: Compress action step
+        uses: a7ul/tar-action@v1.1.0
+        id: compress
+        with:
+          command: c
+          cwd: ./
+          files: |
+            ./apps/tools-site/dist
+          outPath: tools-site.tar.gz
+      - name: Release
+        uses: softprops/action-gh-release@v1
+        with:
+          name: ${{github.ref_name}}
+          tag_name: ${{github.ref_name}}
+          body_path: ./apps/tools-site/changelogs/${{github.ref_name}}.md
+          discussion_category_name: Release
+          files: tools-site.tar.gz
