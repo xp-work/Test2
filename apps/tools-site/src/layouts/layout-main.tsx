@@ -13,6 +13,7 @@ import { useTranslation } from "nsp-i18n";
 import { useBoolean } from "ahooks";
 import { setLoading } from "@project-self/rtk/global-slice";
 import GlobalLoading from "@project-self/components/global-loading/global-loading";
+import LayoutFooter from "./components/layout-footer";
 
 const LayoutMain = () => {
 	const { t } = useTranslation();
@@ -57,13 +58,14 @@ const LayoutMain = () => {
 				<LayoutLeftSidebar prepare={prepare} />
 				<Layout.Content
 					className={
-						"flex flex-col h-full overflow-auto relative [&>section]:overflow-auto [&>section]:px-4 [&>section]:py-2"
+						"flex flex-col h-full overflow-auto relative [&>section]:overflow-auto [&>section]:flex-1 [&>section]:px-4 [&>section]:py-2"
 					}
 					style={{ backgroundColor: colorBgLayout }}
 				>
 					{prepare && <Skeleton active={true} />}
 					{!prepare && <LayoutBreadcrumb />}
 					{!prepare && <Outlet />}
+					{!prepare && <LayoutFooter />}
 				</Layout.Content>
 			</Layout>
 			<React.Fragment>

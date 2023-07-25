@@ -80,7 +80,7 @@ const LayoutBreadcrumb = () => {
 			}
 		}
 		setBreadcrumbItems(tmpBreadcrumbItems);
-	}, [location, layoutState.breadcrumb, globalState.language]);
+	}, [location, layoutState.breadcrumb, globalState.language, t]);
 
 	return (
 		<Breadcrumb
