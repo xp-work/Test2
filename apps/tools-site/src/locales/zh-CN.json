@@ -26,7 +26,8 @@
     "RsaUse": "RSA 使用",
     "TagDetail": "标签详情",
     "Tags": "标签",
-    "UUID": "UUID"
+    "UUID": "UUID",
+    "Color": "颜色"
   },
   "Layout": {
     "Application": {

@@ -115,6 +115,31 @@ export const BusinessMenus: MenuItem[] = [
 			},
 		],
 	},
+	{
+		id: 100300,
+		name: "Menu.Unclassified.Index",
+		i18n: {
+			"zh-CN": "未分类",
+			"en-US": "Unclassified",
+		},
+		icon: "nsp-file-common",
+		path: null,
+		permission: null,
+		children: [
+			{
+				id: 100301,
+				name: "Menu.Unclassified.Color",
+				i18n: {
+					"zh-CN": "颜色",
+					"en-US": "Color",
+				},
+				icon: "nsp-file-common",
+				path: "/unclassified/color",
+				permission: null,
+				children: null,
+			},
+		],
+	},
 ];
 
 export const Menus: MenuItem[] = [
