@@ -47,6 +47,7 @@ jobs:
       - name: Release
         uses: softprops/action-gh-release@v1
         with:
+          token: ${{secrets.CUSTOM_TOKEN}}
           name: ${{github.ref_name}}
           tag_name: ${{github.ref_name}}
           body_path: ./apps/tools-site/changelogs/${{github.ref_name}}.md
