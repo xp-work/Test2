@@ -6,9 +6,7 @@ import SignOutCallbackRoute from "@project-self/routes/sign-out-callback/router"
 import useLoginCheck from "@project-self/utils/auth/use-login-check";
 import { useEffect } from "react";
 import NotFoundRoutes from "@project-self/routes/not-found/router";
-import FixIconRouter from "./fix-icon/router";
 import DashboardRouter from "./dashboard/router";
-import TagRoutes from "./tags/router";
 import ContributorsRouter from "./contributors/router";
 import OneWayEncryptionRouter from "./one-way-encryption/router";
 import HmacRouter from "./hmac/router";
@@ -52,10 +50,6 @@ export type DataRoute2Object = RouteObject & {
  *
  */
 const withPermissionPageRoutes: AppRouteObject[] = [
-	// MasterRoutes,
-	// MasterDetailRoutes,
-	FixIconRouter,
-	...TagRoutes,
 	OneWayEncryptionRouter,
 	HmacRouter,
 	...RsaRouter,
