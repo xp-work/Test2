@@ -10,9 +10,23 @@
     "NotFound": "Sorry, the page you visited does not exist.",
     "BackHome": "Back Home"
   },
-  "HMAC": {
-    "Description": "In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.",
-    "Link": "https://en.wikipedia.org/wiki/HMAC"
+  "Site": {
+    "CookieAccept": "Accept",
+    "CookieDescription": "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
+    "CookieNextTime": "Next time",
+    "CookieTitle": "This website uses cookies"
+  },
+  "Route": {
+    "Contributors": "Contributors",
+    "Dashboard": "Dashboard",
+    "Hmac": "HMAC",
+    "OneWayEncryption": "One Way Encryption",
+    "RandomString": "Random String",
+    "RsaGenerate": "RSA Generate",
+    "RsaUse": "RSA Use",
+    "TagDetail": "标签详情",
+    "Tags": "标签",
+    "UUID": "UUID"
   },
   "Layout": {
     "Application": {
@@ -56,6 +70,10 @@
       "Link": "https://en.wikipedia.org/wiki/SHA-3"
     }
   },
+  "HMAC": {
+    "Description": "In cryptography, an HMAC (sometimes expanded as either keyed-hash message authentication code or hash-based message authentication code) is a specific type of message authentication code (MAC) involving a cryptographic hash function and a secret cryptographic key. As with any MAC, it may be used to simultaneously verify both the data integrity and authenticity of a message.",
+    "Link": "https://en.wikipedia.org/wiki/HMAC"
+  },
   "RSA": {
     "GenerateDigits": "Digits",
     "GenerateError": "RSA generate error",
@@ -82,21 +100,11 @@
     "GenerateNumber": "Generate Number",
     "UseRandom": "Use Math Random"
   },
-  "Route": {
-    "Contributors": "Contributors",
-    "Dashboard": "Dashboard",
-    "Hmac": "HMAC",
-    "OneWayEncryption": "One Way Encryption",
-    "RandomString": "Random String",
-    "RsaGenerate": "RSA Generate",
-    "RsaUse": "RSA Use",
-    "TagDetail": "标签详情",
-    "Tags": "标签"
-  },
-  "Site": {
-    "CookieAccept": "Accept",
-    "CookieDescription": "We use cookies to personalise content and ads, to provide social media features and to analyse our traffic. We also share information about your use of our site with our social media, advertising and analytics partners who may combine it with other information that you’ve provided to them or that they’ve collected from your use of their services.",
-    "CookieNextTime": "Next time",
-    "CookieTitle": "This website uses cookies"
+  "UUID": {
+    "GenerateAction": "Generate",
+    "GenerateNumber": "Generate Number",
+    "Uppercase": "Uppercase",
+    "Braces": "Braces",
+    "NoHyphens": "No Hyphens"
   }
 }

@@ -91,13 +91,13 @@ export const BusinessMenus: MenuItem[] = [
 			},
 			{
 				id: 100202,
-				name: "Menu.Generate.GUID",
+				name: "Menu.Generate.UUID",
 				i18n: {
-					"zh-CN": "GUID",
-					"en-US": "GUID",
+					"zh-CN": "UUID",
+					"en-US": "UUID",
 				},
 				icon: "nsp-file-common",
-				path: "/generate/guid",
+				path: "/generate/uuid",
 				permission: null,
 				children: null,
 			},

@@ -10,9 +10,23 @@
     "NotFound": "对不起，您访问的页面不存在。",
     "BackHome": "返回首页"
   },
-  "HMAC": {
-    "Description": "HMAC (有时扩展为 英语：keyed-hash message authentication code, 密钥散列消息认证码, 或 英语：hash-based message authentication code，散列消息认证码），是一种通过特别计算方式之后产生的消息认证码（MAC），使用密码散列函数，同时结合一个加密密钥。它可以用来保证资料的完整性，同时可以用来作某个消息的身份验证。",
-    "Link": "https://zh.wikipedia.org/wiki/HMAC"
+  "Site": {
+    "CookieAccept": "接受",
+    "CookieDescription": "我们使用 cookie 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息，这些合作伙伴可能会将这些信息与您提供给他们的其他信息或他们从您使用其服务中收集的信息结合起来。",
+    "CookieNextTime": "下次再说",
+    "CookieTitle": "本网站使用 cookie"
+  },
+  "Route": {
+    "Contributors": "贡献者",
+    "Dashboard": "仪表板",
+    "Hmac": "HMAC",
+    "OneWayEncryption": "单向加密",
+    "RandomString": "随机字符串",
+    "RsaGenerate": "RSA 生成",
+    "RsaUse": "RSA 使用",
+    "TagDetail": "标签详情",
+    "Tags": "标签",
+    "UUID": "UUID"
   },
   "Layout": {
     "Application": {
@@ -56,6 +70,10 @@
       "Link": "https://zh.wikipedia.org/wiki/SHA-3"
     }
   },
+  "HMAC": {
+    "Description": "HMAC (有时扩展为 英语：keyed-hash message authentication code, 密钥散列消息认证码, 或 英语：hash-based message authentication code，散列消息认证码），是一种通过特别计算方式之后产生的消息认证码（MAC），使用密码散列函数，同时结合一个加密密钥。它可以用来保证资料的完整性，同时可以用来作某个消息的身份验证。",
+    "Link": "https://zh.wikipedia.org/wiki/HMAC"
+  },
   "RSA": {
     "GenerateDigits": "位数",
     "GenerateError": "RSA 生成错误",
@@ -82,21 +100,11 @@
     "GenerateNumber": "生成数量",
     "UseRandom": "使用随机数"
   },
-  "Route": {
-    "Contributors": "贡献者",
-    "Dashboard": "仪表板",
-    "Hmac": "HMAC",
-    "OneWayEncryption": "单向加密",
-    "RandomString": "随机字符串",
-    "RsaGenerate": "RSA 生成",
-    "RsaUse": "RSA 使用",
-    "TagDetail": "标签详情",
-    "Tags": "标签"
-  },
-  "Site": {
-    "CookieAccept": "接受",
-    "CookieDescription": "我们使用 cookie 来个性化内容和广告，提供社交媒体功能，并分析我们的流量。我们还与我们的社交媒体、广告和分析合作伙伴共享有关您使用我们网站的信息，这些合作伙伴可能会将这些信息与您提供给他们的其他信息或他们从您使用其服务中收集的信息结合起来。",
-    "CookieNextTime": "下次再说",
-    "CookieTitle": "本网站使用 cookie"
+  "UUID": {
+    "GenerateAction": "生成",
+    "GenerateNumber": "生成数量",
+    "Uppercase": "大写",
+    "Braces": "括号",
+    "NoHyphens": "无连字符"
   }
 }
