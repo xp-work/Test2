@@ -8,6 +8,7 @@ permissions:
 jobs:
   mirror:
     runs-on: ubuntu-latest
+    if: github.repository == 'xp-work/Test2'
     steps:
       - name: mirror
         continue-on-error: true
@@ -15,5 +16,5 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.BITBUCKET_ACCESS_MIRROR_SYNC }}
         with:
-          source-repo: ${{github.repositoryUrl}}
+          source-repo: 'git@github.com:xp-work/Test2.git'
           destination-repo: ${{secrets.BITBUCKET_TOOL_FE_GIT}}
