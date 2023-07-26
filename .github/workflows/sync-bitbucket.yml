@@ -1,0 +1,23 @@
+name: 🔀 Sync mirror to Bitbucket
+
+on: workflow_dispatch
+
+permissions:
+  contents: read
+
+jobs:
+  mirror:
+    permissions:
+      contents: none
+    runs-on: ubuntu-latest
+    if: github.repository == 'ant-design/ant-design'
+    steps:
+      - name: mirror
+        continue-on-error: true
+        if: github.event_name == 'push' || (github.event_name == 'create' && github.event.ref_type == 'tag') || github.event_name == 'workflow_dispatch'
+        uses: wearerequired/git-mirror-action@v1
+        env:
+          SSH_PRIVATE_KEY: ${{ secrets.BITBUCKET_ACCESS_MIRROR_SYNC }}
+        with:
+          source-repo: ${{github.repositoryUrl}}
+          destination-repo: ${{secrets.BITBUCKET_TOOL_FE_GIT}}
