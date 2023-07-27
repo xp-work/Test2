@@ -14,6 +14,8 @@ jobs:
       name: Netlify
       url: https://dynamic-kheer-fc5aed.netlify.app/
     name: production deploy
+    outputs:
+      output1: ${{ steps.netlify.outputs.deploy-url }}
     steps:
       - uses: actions/checkout@v3
       - uses: pnpm/action-setup@v2
@@ -46,11 +48,19 @@ jobs:
           enable-commit-comment: true
           enable-commit-status: true
           overwrites-pull-request-comment: true
-          github-deployment-environment: Netlify
-          github-deployment-description: https://dynamic-kheer-fc5aed.netlify.app/
+          enable-github-deployment: false
         env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_AUTH_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
         timeout-minutes: 1
+  deploy:
+    runs-on: ubuntu-latest
+    environment: 
+      name: Netlify
+      url: ${{needs.job1.outputs.output1}}
+    name: environments deployment
+    steps:
+      - uses: actions/checkout@v3
       - name: Deploy
-        run: echo I am deploying! 
+        run: environments deployment! 
+    
