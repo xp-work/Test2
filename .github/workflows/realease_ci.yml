@@ -56,11 +56,9 @@ jobs:
     name: environments deployment
     environment: 
       name: Netlify
-      url: https://dynamic-kheer-fc5aed.netlify.app
+      url: ${{needs.build.outputs.output1}}
     steps:
       - uses: actions/checkout@v3
-      - name: Deploy
-        run: environments deployment! 
       - name: echo
         run: echo ${{needs.build.outputs.output1}}
     
