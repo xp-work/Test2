@@ -54,7 +54,7 @@ jobs:
     runs-on: ubuntu-latest
     environment: 
       name: Netlify
-      url: ${{needs.job1.outputs.output1}}
+      url: ${{needs.build.outputs.output1}}
     name: environments deployment
     steps:
       - uses: actions/checkout@v3
