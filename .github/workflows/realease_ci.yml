@@ -52,6 +52,7 @@ jobs:
         timeout-minutes: 1
   deploy:
     runs-on: ubuntu-latest
+    needs: build
     environment: 
       name: Netlify
       url: ${{needs.build.outputs.output1}}
