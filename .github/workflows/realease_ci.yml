@@ -10,9 +10,6 @@ permissions:
 jobs:
   build:
     runs-on: ubuntu-latest
-    environment: 
-      name: Netlify
-      url: https://dynamic-kheer-fc5aed.netlify.app/
     name: production deploy
     outputs:
       output1: ${{ steps.netlify.outputs.deploy-url }}
