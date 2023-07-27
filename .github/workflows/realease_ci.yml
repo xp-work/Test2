@@ -53,12 +53,14 @@ jobs:
   deploy:
     runs-on: ubuntu-latest
     needs: build
+    name: environments deployment
     environment: 
       name: Netlify
-      url: ${{needs.build.outputs.output1}}
-    name: environments deployment
+      url: https://dynamic-kheer-fc5aed.netlify.app
     steps:
       - uses: actions/checkout@v3
       - name: Deploy
         run: environments deployment! 
+      - name: echo
+        run: echo ${{needs.build.outputs.output1}}
     
