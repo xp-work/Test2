@@ -43,7 +43,7 @@ jobs:
     needs: build
     name: production deployment
     environment:
-      name: netlify-production
+      name: Netlify
       url: ${{ steps.netlify.outputs.deploy-url }}
     steps:
       - uses: actions/checkout@v3
